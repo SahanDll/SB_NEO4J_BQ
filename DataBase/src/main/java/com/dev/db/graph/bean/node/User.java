@@ -1,10 +1,7 @@
 package com.dev.db.graph.bean.node;
 
-import com.dev.db.graph.bean.edge.Downloaded;
+import com.dev.db.graph.bean.edge.*;
 
-import com.dev.db.graph.bean.edge.Login;
-import com.dev.db.graph.bean.edge.Using;
-import com.dev.db.graph.bean.edge.View;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import org.neo4j.ogm.annotation.GraphId;
 import org.neo4j.ogm.annotation.NodeEntity;
@@ -33,6 +30,8 @@ public class User {
     private Set<View> view;
     @Relationship(type = "Downloaded", direction = Relationship.INCOMING)
     private Set<Downloaded> downloaded;
+    @Relationship(type = "Engage", direction = Relationship.INCOMING)
+    private Set<Engage> engage;
 
     public User() {
     }
@@ -67,6 +66,14 @@ public class User {
 
     public void setDownloaded(Set<Downloaded> downloaded) {
         this.downloaded = downloaded;
+    }
+
+    public Set<Engage> getEngage() {
+        return engage;
+    }
+
+    public void setEngage(Set<Engage> engage) {
+        this.engage = engage;
     }
 
     public Long getId() {

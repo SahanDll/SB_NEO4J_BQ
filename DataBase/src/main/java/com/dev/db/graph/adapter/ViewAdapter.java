@@ -37,9 +37,7 @@ public class ViewAdapter {
             if(Data.isNull(row.getF().get(0).get("v")) || Data.isNull(row.getF().get(4).get("v"))){
                 continue;
             }
-            if(Data.isNull(row.getF().get(3).get("v"))){
-                continue;
-            }else{
+            if(!Data.isNull(row.getF().get(3).get("v"))){
                 if("firebase_previous_screen".equalsIgnoreCase(row.getF().get(2).get("v").toString())){
                     st = new ScreenTransition();
                     st.setPreviousScreen(Data.isNull(row.getF().get(3).get("v")) ? "null" : row.getF().get(3).get("v").toString());

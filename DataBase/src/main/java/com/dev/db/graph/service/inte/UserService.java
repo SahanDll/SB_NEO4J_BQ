@@ -11,11 +11,11 @@ import java.util.Map;
 public interface UserService {
     public User create(User user);
 
-    public Map<String, Object> read(String userId);
+    public JSONObject read(String userId);
 
     public Map<String, Object> update(User user);
 
-    public Map<String, Object> delete(String userId);
+    public JSONObject delete(String userId);
 
     public JSONObject readAll();
 

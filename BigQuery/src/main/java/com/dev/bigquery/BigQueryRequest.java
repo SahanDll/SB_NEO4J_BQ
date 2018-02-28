@@ -44,7 +44,11 @@ public class BigQueryRequest {
             try {
                 response = executeQuery(query);
             } catch (Exception e) {
-                LOGGER.error("Error : "+e.getMessage().substring(e.getMessage().indexOf("{")));
+                try {
+                    LOGGER.error("Error : "+e.getMessage().substring(e.getMessage().indexOf("{")));
+                } catch (Exception e1) {
+                    LOGGER.error("Error : "+e.getMessage());
+                }
             }
         } else {
             LOGGER.info("{\"message\" : \"No matching data found\"}");
@@ -61,7 +65,11 @@ public class BigQueryRequest {
             try {
                 response = executeQuery(query);
             } catch (Exception e) {
-                LOGGER.error("Error : "+e.getMessage().substring(e.getMessage().indexOf("{")));
+                try {
+                    LOGGER.error("Error : "+e.getMessage().substring(e.getMessage().indexOf("{")));
+                } catch (Exception e1) {
+                    LOGGER.error("Error : "+e.getMessage());
+                }
             }
         } else {
             LOGGER.info("{\"message\" : \"No matching data found\"}");

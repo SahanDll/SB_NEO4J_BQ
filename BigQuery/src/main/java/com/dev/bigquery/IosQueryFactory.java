@@ -137,6 +137,37 @@ public class IosQueryFactory {
                         " AND (event_dim.params.key = 'firebase_previous_screen' OR event_dim.params.key = 'firebase_screen')" +
                         " ORDER BY user_dim.user_id desc, event_dim.timestamp_micros asc";
                 break;
+            case 9:
+                query = "SELECT" +
+                        " user_dim.user_id," +//0
+                        " event_dim.name," +//1
+                        " event_dim.params.key," +//2
+                        " event_dim.params.value.int_value," +//3
+                        " event_dim.timestamp_micros," +//4
+                        " event_dim.params.value.string_value" +//5
+                        " FROM [com_mayBank_MKETradeUAT_IOS.app_events_"+date+"]" +
+                        " WHERE user_dim.user_id <> '-1'" +
+                        " AND user_dim.user_id <> 'null'" +
+                        " AND event_dim.name= 'user_engagement'" +
+                        " AND (event_dim.params.key = 'engagement_time_msec' OR event_dim.params.key = 'firebase_screen')" +
+                        " ORDER BY user_dim.user_id desc, event_dim.timestamp_micros asc, event_dim.params.key desc" +
+                        " LIMIT "+records;
+                break;
+            case 10:
+                query = "SELECT" +
+                        " user_dim.user_id," +//0
+                        " event_dim.name," +//1
+                        " event_dim.params.key," +//2
+                        " event_dim.params.value.int_value," +//3
+                        " event_dim.timestamp_micros," +//4
+                        " event_dim.params.value.string_value" +//5
+                        " FROM [com_mayBank_MKETradeUAT_IOS.app_events_"+date+"]" +
+                        " WHERE user_dim.user_id <> '-1'" +
+                        " AND user_dim.user_id <> 'null'" +
+                        " AND event_dim.name= 'user_engagement'" +
+                        " AND (event_dim.params.key = 'engagement_time_msec' OR event_dim.params.key = 'firebase_screen')" +
+                        " ORDER BY user_dim.user_id desc, event_dim.timestamp_micros asc, event_dim.params.key desc";
+                break;
             default:
                 query = null;
 

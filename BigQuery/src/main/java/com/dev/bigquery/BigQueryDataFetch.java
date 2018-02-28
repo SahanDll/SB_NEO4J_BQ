@@ -3,9 +3,16 @@ package com.dev.bigquery;
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
+import org.springframework.http.HttpEntity;
+import org.springframework.http.ResponseEntity;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
+import org.springframework.util.LinkedMultiValueMap;
+import org.springframework.util.MultiValueMap;
+import org.springframework.web.client.RestTemplate;
 
+import java.util.HashMap;
+import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
 /**
@@ -14,7 +21,7 @@ import java.util.concurrent.TimeUnit;
 @Service
 public class BigQueryDataFetch {
 
-    //@Scheduled(fixedRate=10000)
+
     //@Scheduled(fixedDelayString = "${const.bq.delay}", initialDelay = 1000L)
     public void fetchData() throws Exception {
         RestAssured.baseURI ="http://localhost:8381/fmt-sentinel/api/";
@@ -36,7 +43,24 @@ public class BigQueryDataFetch {
         TimeUnit.SECONDS.sleep(5);
         Response responseI4 = request.get("view/sync-ios-data");
         TimeUnit.SECONDS.sleep(5);
+        Response responseA5 = request.get("engage/sync-android-data");
+        TimeUnit.SECONDS.sleep(5);
+        Response responseI5 = request.get("engage/sync-ios-data");
+        TimeUnit.SECONDS.sleep(5);
         System.exit(0);
     }
 
+    //@Scheduled(fixedRate=10000)
+    public void fetchSingleData(){
+        MultiValueMap<String, String> headers = new LinkedMultiValueMap<String, String>();
+        Map<String,String> map = new HashMap<String, String>();
+        map.put("Content-Type", "application/json");
+        headers.setAll(map);
+
+/*        HttpEntity<?> request = new HttpEntity<>(jsonObject, headers);
+        LOGGER.info("Request : " + jsonObject.toJSONString());
+        ResponseEntity<String> response = new RestTemplate().postForEntity(url, request, String.class);*/
+        ResponseEntity<String> response = new RestTemplate().getForEntity("http://localhost:8381/fmt-sentinel/api/user/read-all", String.class);
+        System.out.println("Response : " +response.getBody());
+    }
 }
