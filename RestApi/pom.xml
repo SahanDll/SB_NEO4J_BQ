@@ -7,18 +7,24 @@
         <groupId>com.dev</groupId>
         <version>1.0.1</version>
     </parent>
+    <groupId>com.dev.ra</groupId>
     <modelVersion>4.0.0</modelVersion>
     <packaging>jar</packaging>
     <artifactId>RestApi</artifactId>
     <dependencies>
         <dependency>
-            <groupId>com.dev</groupId>
+            <groupId>com.dev.bq</groupId>
             <artifactId>BigQuery</artifactId>
             <version>${project.version}</version>
         </dependency>
         <dependency>
-            <groupId>com.dev</groupId>
+            <groupId>com.dev.db</groupId>
             <artifactId>DataBase</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.dev.au</groupId>
+            <artifactId>Authentication</artifactId>
             <version>${project.version}</version>
         </dependency>
     </dependencies>

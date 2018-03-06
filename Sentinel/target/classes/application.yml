@@ -1,0 +1,6 @@
+security:
+  user:
+    name: maybank
+    password: secret@123
+    role: USER
+
