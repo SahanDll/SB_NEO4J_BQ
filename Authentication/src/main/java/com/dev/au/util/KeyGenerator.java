@@ -3,7 +3,7 @@ package com.dev.au.util;
 import org.bouncycastle.util.encoders.Base64;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.security.authentication.encoding.ShaPasswordEncoder;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 import javax.crypto.Cipher;
 import java.security.*;
@@ -16,11 +16,12 @@ import java.security.spec.X509EncodedKeySpec;
 public class KeyGenerator {
     private static final Logger logger = LoggerFactory.getLogger(KeyGenerator.class);
     private static KeyGenerator self;
-    private static final int PASSWORD_STRENGTH = 256;
+    private static final int PASSWORD_STRENGTH = 16;
     private static final String ALGORITHM = "RSA";
     private static final int KEY_SIZE = 512;
     private static byte[] publicKey;
     private static byte[] privateKey;
+    private static BCryptPasswordEncoder passwordEncoder;
 
     private KeyGenerator(){
         /*Implementation not required*/
@@ -35,6 +36,7 @@ public class KeyGenerator {
                 Key pvt = kp.getPrivate();
                 publicKey = pub.getEncoded();
                 privateKey = pvt.getEncoded();
+                passwordEncoder = new BCryptPasswordEncoder(PASSWORD_STRENGTH);
             } catch (Exception e) {
                 logger.error("Error : ", e);
             }
@@ -51,8 +53,12 @@ public class KeyGenerator {
     }
 
     public String encodePassword(String password){
-        ShaPasswordEncoder s = new ShaPasswordEncoder(PASSWORD_STRENGTH);
-        return s.encodePassword(password,"");
+        System.out.println("KG : "+ passwordEncoder.encode(password));
+        return passwordEncoder.encode(password);
+    }
+
+    public BCryptPasswordEncoder getPasswordEncoder() {
+        return passwordEncoder;
     }
 
     public byte[] encrypt(byte[] inputData) throws Exception {

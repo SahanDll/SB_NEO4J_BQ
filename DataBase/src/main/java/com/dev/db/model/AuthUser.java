@@ -12,7 +12,7 @@ public class AuthUser implements Serializable {
     private Integer userRole;
     private String updatedUser;
     private Integer status;
-    private byte[] encPassword;
+    private String encPassword;
 
     public String getUserName() {
         return userName;
@@ -54,11 +54,11 @@ public class AuthUser implements Serializable {
         this.status = status;
     }
 
-    public byte[] getEncPassword() {
+    public String getEncPassword() {
         return encPassword;
     }
 
-    public void setEncPassword(byte[] encPassword) {
+    public void setEncPassword(String encPassword) {
         this.encPassword = encPassword;
     }
 
@@ -70,7 +70,7 @@ public class AuthUser implements Serializable {
                 ", userRole=" + userRole +
                 ", updatedUser='" + updatedUser + '\'' +
                 ", status=" + status +
-                ", encPassword=" + Arrays.toString(encPassword) +
+                ", encPassword=" + encPassword +
                 '}';
     }
 }

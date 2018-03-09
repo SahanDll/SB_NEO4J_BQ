@@ -33,18 +33,6 @@ public class AuthUserDetailsService implements UserDetailsService {
     @Value("${security.user.role}")
     private String role;*/
 
-/*    @Override
-    public UserDetails loadUserByUsername(String s) throws UsernameNotFoundException {
-        System.out.println("**********************   "+s);
-        List<GrantedAuthority> authorities = new ArrayList<>();
-        authorities.add(new SimpleGrantedAuthority("ROLE_SUPER"));
-        *//*UserDetails userDetails = new org.springframework.security.core.userdetails.
-                User("maybank", "secret@123", authorities);*//*
-        //System.out.println(userDetails.getUsername());
-        UserDetails userDetails = null;
-        return userDetails;
-    }*/
-
     @Override
     public UserDetails loadUserByUsername(String s) throws UsernameNotFoundException {
         UserLogin user = repository.findByUserName(s);
@@ -52,7 +40,6 @@ public class AuthUserDetailsService implements UserDetailsService {
         if(user == null) {
             throw new UsernameNotFoundException(String.format("The username %s doesn't exist", s));
         }
-        System.out.println(user.toString());
 
         List<GrantedAuthority> authorities = new ArrayList<>();
         switch (user.getUserRole()){
@@ -82,7 +69,7 @@ public class AuthUserDetailsService implements UserDetailsService {
         UserDetails userDetails = null;
         try {
             userDetails = new org.springframework.security.core.userdetails.
-                    User(user.getUserName(), KeyGenerator.getInstance().encodePassword(Common.getInstance().getUserADMap().get(user.getUserName().toUpperCase())), authorities);
+                    User(user.getUserName(), Common.getInstance().getUserADMap().get(user.getUserName().toUpperCase()), authorities);
         } catch (Exception e) {
             e.printStackTrace();
         }

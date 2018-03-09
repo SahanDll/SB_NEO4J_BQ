@@ -3,6 +3,7 @@ package com.dev.sv.swagger;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import springfox.documentation.builders.ParameterBuilder;
+import springfox.documentation.builders.PathSelectors;
 import springfox.documentation.builders.RequestHandlerSelectors;
 import springfox.documentation.schema.ModelRef;
 import springfox.documentation.service.ApiInfo;
@@ -13,6 +14,7 @@ import springfox.documentation.spring.web.plugins.Docket;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 import static springfox.documentation.builders.PathSelectors.regex;
@@ -30,15 +32,18 @@ public class SwaggerConfig {
         List<Parameter> aParameters = new ArrayList<Parameter>();
         aParameters.add(aParameterBuilder.build());
         return new Docket(DocumentationType.SWAGGER_2)
-                .select().apis(RequestHandlerSelectors.basePackage("com.dev"))
+                .select()
+                //.apis(RequestHandlerSelectors.basePackage("com.dev"))
                 .paths(regex("/api.*"))
+                .apis(RequestHandlerSelectors.any())
+                //.paths(PathSelectors.any())
                 .build()
                 .apiInfo(metaData())
                 .globalOperationParameters(aParameters);
     }
 
     private ApiInfo metaData() {
-        ApiInfo apiInfo = new ApiInfo(
+/*        ApiInfo apiInfo = new ApiInfo(
                 "Sentinal API",
                 "Powered by Spring Boot",
                 "1.0.1",
@@ -46,6 +51,16 @@ public class SwaggerConfig {
                 new Contact("Sahan Devaka Lokuge", "http://www.maybank.com/about/", "suhan.d@maybank.com.com"),
                 "License Version 2.0",
                 "http://www.maybank.com/licenses/LICENSE-2.0");
-        return apiInfo;
+        return apiInfo;*/
+        return new ApiInfo(
+                "Sentinal API",
+                "Powered by Spring Boot 2.0",
+                "1.0.1",
+                "Terms of service",
+                new Contact("Sahan Devaka Lokuge","http://www.maybank.com/about/","suhan.d@maybank.com.com"),
+                "License Version 2.0",
+                "http://www.maybank.com/licenses/LICENSE-2.0",
+                Collections.emptyList()
+        );
     }
 }

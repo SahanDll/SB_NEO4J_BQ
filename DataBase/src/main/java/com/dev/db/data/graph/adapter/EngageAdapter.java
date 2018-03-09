@@ -6,7 +6,8 @@ import com.dev.db.data.graph.bean.node.User;
 import com.dev.db.util.Common;
 import com.google.api.client.util.Data;
 import com.google.api.services.bigquery.model.TableRow;
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
@@ -14,7 +15,7 @@ import java.util.List;
 
 @Component
 public class EngageAdapter {
-    private static final Logger LOGGER = Logger.getLogger(EngageAdapter.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(EngageAdapter.class);
     private static EngageAdapter self;
 
     private EngageAdapter(){

@@ -1,5 +1,6 @@
 package com.dev.au.service.impl;
 
+import com.dev.au.util.KeyGenerator;
 import com.dev.db.data.h2.bean.UserLogin;
 import com.dev.db.data.h2.repository.UserLoginRepository;
 import com.dev.db.model.AuthUser;
@@ -130,7 +131,7 @@ public class UserLoginServiceImpl implements UserLoginService {
         JSONObject jsonOut = new JSONObject();
         UserLogin userLogin = null;
         try {
-            userLogin = repository.findOne(user.getUserName());
+            userLogin = repository.findByUserName(user.getUserName());
             if (userLogin != null) {
                 try {
                     userLogin.setPassword(user.getPassword());
@@ -156,7 +157,7 @@ public class UserLoginServiceImpl implements UserLoginService {
     public JSONObject deleteUser(String userName) {
         JSONObject jsonOut = new JSONObject();
         try {
-            UserLogin ul = repository.findOne(userName);
+            UserLogin ul = repository.findByUserName(userName);
             if (ul != null) {
                 try {
                     repository.delete(ul);

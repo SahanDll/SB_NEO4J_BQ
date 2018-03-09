@@ -68,7 +68,7 @@ public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdap
 				.authorizedGrantTypes(grantType)
 				.scopes(scopeRead, scopeWrite)
 				.resourceIds(resourceIds)
-				.authorities("ROLE_SUPER")
+				.authorities("SUPER")
 				.accessTokenValiditySeconds(validitySeconds);
 	}
 
@@ -79,6 +79,7 @@ public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdap
 		endpoints.tokenStore(tokenStore)
 				.accessTokenConverter(accessTokenConverter)
 				.tokenEnhancer(enhancerChain)
+				.allowedTokenEndpointRequestMethods(HttpMethod.GET, HttpMethod.POST)
 				.authenticationManager(authenticationManager);
 
 	}

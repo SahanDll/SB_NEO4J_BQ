@@ -1,12 +1,13 @@
 package com.dev.au.config;
 
+import com.dev.au.util.KeyGenerator;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
 import org.springframework.security.authentication.AuthenticationManager;
-import org.springframework.security.authentication.encoding.ShaPasswordEncoder;
+import org.springframework.security.authentication.dao.DaoAuthenticationProvider;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
@@ -15,7 +16,11 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.NoOpPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.oauth2.config.annotation.web.configurers.AuthorizationServerSecurityConfigurer;
+import org.springframework.security.oauth2.config.annotation.web.configurers.ResourceServerSecurityConfigurer;
 import org.springframework.security.oauth2.provider.token.DefaultTokenServices;
 import org.springframework.security.oauth2.provider.token.TokenStore;
 import org.springframework.security.oauth2.provider.token.store.JwtAccessTokenConverter;
@@ -38,13 +43,13 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     @Value("${security.security-realm}")
     private String securityRealm;
 
-    @Value("${security.user.name}")
+    @Value("${spring.security.user.name}")
     private String username;
 
-    @Value("${security.user.password}")
+    @Value("${spring.security.user.password}")
     private String password;
 
-    @Value("${security.user.role}")
+    @Value("${spring.security.user.roles}")
     private String role;
 
 
@@ -57,17 +62,33 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         return super.authenticationManager();
     }
 
+    @Bean
+    protected PasswordEncoder passwordEncoder() throws Exception {
+        return NoOpPasswordEncoder.getInstance();
+    }
+
+    @Bean
+    public DaoAuthenticationProvider authenticationProvider() {
+        DaoAuthenticationProvider authenticationProvider = new DaoAuthenticationProvider();
+        authenticationProvider.setUserDetailsService(userDetailsService);
+        authenticationProvider.setPasswordEncoder(KeyGenerator.getInstance().getPasswordEncoder());
+        return authenticationProvider;
+    }
+
+
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
         auth.userDetailsService(userDetailsService)
-                .passwordEncoder(new ShaPasswordEncoder(encodingStrength));
+        .passwordEncoder(passwordEncoder());
+
+        //auth.authenticationProvider(authenticationProvider());
 /*        auth.inMemoryAuthentication()
                 .withUser(username).password(password).roles(role);*/
     }
 
     @Override
     public void configure(WebSecurity web) throws Exception {
-        web.ignoring().antMatchers( "/api/check/**", "/api/asyncCheck/**", "/api/asyncTest/**", "/api/chatBot/**", "/h2-console/**", "/api/addLoginDetail/**", "/api/user-login/authenticateUser/**", "/api/user-login/getPublicKey/**",  "/api/user-login/encrypt-password/**","/health/**");
+        web.ignoring().antMatchers( "/api/check/**", "/api/asyncCheck/**", "/api/asyncTest/**", "/api/chatBot/**", "/h2-console/**", "/api/addLoginDetail/**", "/api/user-login/authenticateUser/**", "/api/user-login/getPublicKey/**",  "/api/user-login/encrypt-password/**",  "/api/user-login/auth-token/**",  "/api/user-login/auth-base/**","/health/**");
         web.ignoring().antMatchers("/sam/**", "/sam/index.html", "/sam/html/**", "/sam/html/model/**", "/sam/image/**", "/sam/script/**", "/sam/customScript/**", "/sam/css/**", "/sam/fonts/**");
         web.ignoring().antMatchers("/v2/api-docs", "/configuration/ui", "/swagger-resources/**", "/configuration/**", "/swagger-ui.html", "/webjars/**");
     }

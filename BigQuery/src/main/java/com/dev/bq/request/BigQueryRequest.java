@@ -10,7 +10,8 @@ import com.google.api.client.util.Data;
 import com.google.api.services.bigquery.Bigquery;
 import com.google.api.services.bigquery.BigqueryScopes;
 import com.google.api.services.bigquery.model.*;
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.io.IOException;
 import java.util.List;
@@ -19,7 +20,7 @@ import java.util.List;
  * Created by N5608296 on 08/01/2018 008.
  */
 public class BigQueryRequest {
-    private static final Logger LOGGER = Logger.getLogger(BigQueryRequest.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(BigQueryRequest.class);
     private static BigQueryRequest self;
     private String projectId = "mketrade-cefcb";
     private Bigquery bigquery;

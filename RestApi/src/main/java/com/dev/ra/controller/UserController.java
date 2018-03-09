@@ -10,6 +10,7 @@ import com.dev.db.data.sql.fmt.service.inte.SettingMstService;
 import org.json.simple.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -49,6 +50,7 @@ public class UserController {
      * GET /read  --> Read all popularSearch from the database.
      */
     @RequestMapping(value = "/read-all", method = RequestMethod.GET)
+    @Cacheable("user")
     public JSONObject readAll() {
         JSONObject response = null;
         try {

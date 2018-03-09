@@ -29,7 +29,7 @@ import java.util.concurrent.TimeUnit;
 public class BigQueryDataFetch {
 
 
-    @Scheduled(fixedDelayString = "${const.bq.delay}", initialDelay = 1000L)
+    //@Scheduled(fixedDelayString = "${const.bq.delay}", initialDelay = 1000L)
     public void fetchData() throws Exception {
         RestAssured.baseURI ="http://localhost:8381/fmt-sentinel/api/";
         RequestSpecification request = RestAssured.given();

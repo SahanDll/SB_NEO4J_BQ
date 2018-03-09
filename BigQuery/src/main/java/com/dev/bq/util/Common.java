@@ -87,7 +87,6 @@ public class Common {
 
         HttpEntity<?> request = new HttpEntity<>(headers);
         ResponseEntity<JSONObject> response = new RestTemplate().postForEntity(builder.toUriString(), request, JSONObject.class);
-        System.out.println("Response : " +response.getBody());
 
         if(null == response.getBody()){
             return accessToken;
@@ -117,7 +116,6 @@ public class Common {
 
         HttpEntity<?> request = new HttpEntity<>(user, headers);
         ResponseEntity<JSONObject> response = new RestTemplate().postForEntity(url, request, JSONObject.class);
-        System.out.println("Response : " +response.getBody());
 
         if(null == response.getBody()){
             return pass;
@@ -142,7 +140,6 @@ public class Common {
         headers.setAll(map);
 
         ResponseEntity<JSONObject> response = new RestTemplate().getForEntity("http://localhost:8381/fmt-sentinel/api/user-login/getPublicKey", JSONObject.class);
-        System.out.println("Response : " +response.getBody());
 
         if(null == response.getBody()){
             return encPassword;
@@ -150,7 +147,6 @@ public class Common {
             try {
                 encKey = java.util.Base64.getDecoder().decode(response.getBody().get("key").toString());
                 encPassword = com.dev.au.util.KeyGenerator.encryptWithExternalKey(encKey, password.getBytes());
-                System.out.println(encPassword);
             } catch (Exception e) {
                 e.printStackTrace();
             }
@@ -158,7 +154,7 @@ public class Common {
         return encPassword;
     }
 
-    private static String baseAuthentication(){
+    public static String baseAuthentication(){
         StringBuilder stringBuilder = new StringBuilder();
         String mimeEncodedString = null;
         String clientId = "sentinelJwtClientId";

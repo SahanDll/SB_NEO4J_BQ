@@ -1,6 +1,23 @@
-security:
-  user:
-    name: maybank
-    password: secret@123
-    role: USER
-
+spring:
+  security:
+    user:
+      name: maybank
+      password: secret@123
+      roles: SUPER
+    oauth2:
+      resources:
+        filter-order: 3
+  cache:
+    jcache:
+      config: classpath:ehcache.xml
+  data:
+    neo4j:
+      uri: bolt://127.0.0.1:7687
+      username: neo4j
+      password: password
+      embedded:
+        enabled: false
+server:
+  port: 8381
+  servlet:
+    context-path: /fmt-sentinel
