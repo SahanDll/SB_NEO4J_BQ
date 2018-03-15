@@ -5,6 +5,7 @@ import com.dev.au.util.Common;
 import com.dev.au.util.KeyGenerator;
 import com.dev.db.data.h2.bean.UserLogin;
 import com.dev.db.data.h2.repository.UserLoginRepository;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Primary;
 import org.springframework.security.core.GrantedAuthority;
@@ -20,7 +21,7 @@ import java.util.List;
 
 @Component
 public class AuthUserDetailsService implements UserDetailsService {
-
+    private static final org.slf4j.Logger logger = LoggerFactory.getLogger(AuthUserDetailsService.class);
     @Autowired
     UserLoginRepository repository;
 
@@ -71,7 +72,7 @@ public class AuthUserDetailsService implements UserDetailsService {
             userDetails = new org.springframework.security.core.userdetails.
                     User(user.getUserName(), Common.getInstance().getUserADMap().get(user.getUserName().toUpperCase()), authorities);
         } catch (Exception e) {
-            e.printStackTrace();
+            logger.error("Auth Error : ", e);
         }
 /*        UserDetails userDetails = new org.springframework.security.core.userdetails.
                 User(user.getUserName(), user.getPassword(), authorities);*/

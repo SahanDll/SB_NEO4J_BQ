@@ -7,6 +7,7 @@ package com.dev.ra.controller;
 import com.dev.bq.request.BigQueryRequest;
 import com.google.api.services.bigquery.model.GetQueryResultsResponse;
 import org.json.simple.JSONObject;
+import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -15,7 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/api/big-query")
 public class BigQueryController {
-
+    private static final org.slf4j.Logger logger = LoggerFactory.getLogger(BigQueryController.class);
     /**
      * GET /read  --> Read all big query.
      */
@@ -35,7 +36,7 @@ public class BigQueryController {
             jsonObject.put("platform", platform);
             jsonObject.put("response", response);
         } catch (Exception e) {
-            e.printStackTrace();
+            logger.error("Controller Error : ", e);
         }
         return jsonObject;
     }

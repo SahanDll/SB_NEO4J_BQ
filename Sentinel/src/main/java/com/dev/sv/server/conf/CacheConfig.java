@@ -12,7 +12,7 @@ import java.util.Date;
 @Component
 public class CacheConfig {
     @CacheEvict(allEntries = true, value = {"user"})
-    @Scheduled(fixedDelay = 120000 ,  initialDelay = 1000)
+    //@Scheduled(fixedDelay = 120000 ,  initialDelay = 1000)
     public void userCacheEvict() {
         System.out.println("Flush user Cache " + new Date());
     }

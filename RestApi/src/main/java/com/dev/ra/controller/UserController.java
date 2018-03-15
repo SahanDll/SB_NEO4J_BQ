@@ -8,6 +8,7 @@ import com.dev.db.data.graph.service.inte.UserService;
 import com.dev.db.data.sql.bo.service.inte.ClientMstService;
 import com.dev.db.data.sql.fmt.service.inte.SettingMstService;
 import org.json.simple.JSONObject;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cache.annotation.Cacheable;
@@ -19,7 +20,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/api/user")
 public class UserController {
-
+    private static final org.slf4j.Logger logger = LoggerFactory.getLogger(UserController.class);
     @Autowired
     UserService userService;
     @Value("${const.bq.backDate}")
@@ -41,7 +42,7 @@ public class UserController {
             response = userService.read(userId);
 
         } catch (Exception e) {
-            e.printStackTrace();
+            logger.error("Controller Error : ", e);
         }
         return response;
     }
@@ -59,7 +60,7 @@ public class UserController {
             response = userService.readAll();
 
         } catch (Exception e) {
-            e.printStackTrace();
+            logger.error("Controller Error : ", e);
         }
         return response;
     }

@@ -2,10 +2,10 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Analitics.iml" filepath="$PROJECT_DIR$/Analitics.iml" />
       <module fileurl="file://$PROJECT_DIR$/Authentication/Authentication.iml" filepath="$PROJECT_DIR$/Authentication/Authentication.iml" />
       <module fileurl="file://$PROJECT_DIR$/BigQuery/BigQuery.iml" filepath="$PROJECT_DIR$/BigQuery/BigQuery.iml" />
       <module fileurl="file://$PROJECT_DIR$/DataBase/DataBase.iml" filepath="$PROJECT_DIR$/DataBase/DataBase.iml" />
+      <module fileurl="file://$PROJECT_DIR$/DataExtract/DataExtract.iml" filepath="$PROJECT_DIR$/DataExtract/DataExtract.iml" />
       <module fileurl="file://$PROJECT_DIR$/RestApi/RestApi.iml" filepath="$PROJECT_DIR$/RestApi/RestApi.iml" />
       <module fileurl="file://$PROJECT_DIR$/Sentinel/Sentinel.iml" filepath="$PROJECT_DIR$/Sentinel/Sentinel.iml" />
     </modules>

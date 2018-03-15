@@ -33,6 +33,11 @@
             <artifactId>Authentication</artifactId>
             <version>${project.version}</version>
         </dependency>
+        <dependency>
+            <groupId>com.dev.de</groupId>
+            <artifactId>DataExtract</artifactId>
+            <version>${project.version}</version>
+        </dependency>
     </dependencies>
 
     <profiles>
@@ -73,6 +78,7 @@
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
                     <executable>true</executable>
+                    <mainClass>com.dev.sv.server.Application</mainClass>
                 </configuration>
             </plugin>
             <plugin>

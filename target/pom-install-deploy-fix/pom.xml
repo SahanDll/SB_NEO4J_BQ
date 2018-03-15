@@ -12,6 +12,7 @@
         <module>DataBase</module>
         <module>Authentication</module>
         <module>RestApi</module>
+        <module>DataExtract</module>
         <module>Sentinel</module>
     </modules>
     <packaging>pom</packaging>

@@ -21,3 +21,12 @@ server:
   port: 8381
   servlet:
     context-path: /fmt-sentinel
+logging:
+  level:
+    org.springframework.web: ERROR
+    com.dev: INFO
+    org.apache.nifi: FATAL
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss} - %msg%n"
+    file: "%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n"
+  file: logs\fmt-sentinel.log

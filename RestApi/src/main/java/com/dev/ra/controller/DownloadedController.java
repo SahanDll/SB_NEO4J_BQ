@@ -10,6 +10,7 @@ import com.dev.db.data.graph.bean.edge.Downloaded;
 import com.dev.db.data.graph.service.inte.DownloadedService;
 import com.google.api.services.bigquery.model.GetQueryResultsResponse;
 import org.json.simple.JSONObject;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -21,7 +22,7 @@ import java.io.IOException;
 @RestController
 @RequestMapping("/api/downloaded")
 public class DownloadedController {
-
+    private static final org.slf4j.Logger logger = LoggerFactory.getLogger(DownloadedController.class);
     @Autowired
     DownloadedService downloadedService;
     @Value("${const.bq.backDate}")
@@ -42,7 +43,7 @@ public class DownloadedController {
                 }
             }
         } catch (IOException e) {
-            e.printStackTrace();
+            logger.error("Controller Error : ", e);
         }
         return response;
     }
@@ -62,7 +63,7 @@ public class DownloadedController {
                 }
             }
         } catch (IOException e) {
-            e.printStackTrace();
+            logger.error("Controller Error : ", e);
         }
         return response;
     }
@@ -78,7 +79,7 @@ public class DownloadedController {
             response = downloadedService.readAll();
 
         } catch (Exception e) {
-            e.printStackTrace();
+            logger.error("Controller Error : ", e);
         }
         return response;
     }

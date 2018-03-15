@@ -94,7 +94,7 @@ public class Common {
             try {
                 accessToken = response.getBody().get("access_token").toString();
             } catch (Exception e) {
-                e.printStackTrace();
+                LOGGER.error("Common Error : ", e);
             }
         }
         return  "Bearer "+ accessToken;
@@ -125,7 +125,7 @@ public class Common {
                     pass = response.getBody().get("pass").toString();
                 }
             } catch (Exception e) {
-                e.printStackTrace();
+                LOGGER.error("Common Error : ", e);
             }
         }
         return  pass;
@@ -148,7 +148,7 @@ public class Common {
                 encKey = java.util.Base64.getDecoder().decode(response.getBody().get("key").toString());
                 encPassword = com.dev.au.util.KeyGenerator.encryptWithExternalKey(encKey, password.getBytes());
             } catch (Exception e) {
-                e.printStackTrace();
+                LOGGER.error("Common Error : ", e);
             }
         }
         return encPassword;
@@ -165,7 +165,7 @@ public class Common {
             byte[] mimeBytes = stringBuilder.toString().getBytes("utf-8");
             mimeEncodedString = Base64.getMimeEncoder().encodeToString(mimeBytes);
         } catch (UnsupportedEncodingException e) {
-            e.printStackTrace();
+            LOGGER.error("Common Error : ", e);
         }
         return "Basic " +mimeEncodedString;
     }
