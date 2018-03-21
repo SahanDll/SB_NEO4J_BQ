@@ -19,6 +19,7 @@
     <orderEntry type="module" module-name="BigQuery" />
     <orderEntry type="module" module-name="DataBase" />
     <orderEntry type="module" module-name="Authentication" />
+    <orderEntry type="module" module-name="DataSync" />
     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter-data-neo4j:2.0.0.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter:2.0.0.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot:2.0.0.RELEASE" level="project" />

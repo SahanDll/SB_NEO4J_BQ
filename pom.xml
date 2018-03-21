@@ -10,6 +10,7 @@
     <modules>
         <module>BigQuery</module>
         <module>DataBase</module>
+        <module>DataSync</module>
         <module>Authentication</module>
         <module>RestApi</module>
         <module>DataExtract</module>

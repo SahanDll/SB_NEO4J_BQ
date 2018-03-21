@@ -6,10 +6,10 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="Authentication" />
         <module name="BigQuery" />
         <module name="DataBase" />
         <module name="DataExtract" />
+        <module name="DataSync" />
         <module name="RestApi" />
         <module name="Sentinel" />
       </profile>
@@ -20,6 +20,7 @@
       <module name="BigQuery" target="1.8" />
       <module name="DataBase" target="1.8" />
       <module name="DataExtract" target="1.8" />
+      <module name="DataSync" target="1.8" />
       <module name="RestApi" target="1.8" />
       <module name="Sentinel" target="1.8" />
     </bytecodeTargetLevel>

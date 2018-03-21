@@ -7,10 +7,10 @@ import io.restassured.specification.RequestSpecification;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.ParseException;
-import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.ResponseEntity;
 import org.springframework.scheduling.annotation.Scheduled;
+import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 import org.springframework.util.LinkedMultiValueMap;
 import org.springframework.util.MultiValueMap;
@@ -26,12 +26,11 @@ import java.util.concurrent.TimeUnit;
 /**
  * Created by N5608296 on 08/01/2018 008.
  */
-@Service
+@Component
 public class BigQueryDataFetch {
-    private static final org.slf4j.Logger logger = LoggerFactory.getLogger(BigQueryDataFetch.class);
 
     //@Scheduled(fixedDelayString = "${const.bq.delay}", initialDelay = 1000L)
-    @Scheduled(cron = "0 0 1 * * *")
+    //@Scheduled(cron = "0 0 1 * * *")
     public void fetchData() throws Exception {
         RestAssured.baseURI ="http://localhost:8381/fmt-sentinel/api/";
         RequestSpecification request = RestAssured.given();

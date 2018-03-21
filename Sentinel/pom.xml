@@ -38,6 +38,11 @@
             <artifactId>DataExtract</artifactId>
             <version>${project.version}</version>
         </dependency>
+        <dependency>
+            <groupId>com.dev.ds</groupId>
+            <artifactId>DataSync</artifactId>
+            <version>${project.version}</version>
+        </dependency>
     </dependencies>
 
     <profiles>

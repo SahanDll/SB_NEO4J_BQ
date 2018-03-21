@@ -7,10 +7,10 @@
         <groupId>com.dev</groupId>
         <version>1.0.1</version>
     </parent>
-    <groupId>com.dev.ra</groupId>
+    <groupId>com.dev.ds</groupId>
     <modelVersion>4.0.0</modelVersion>
     <packaging>jar</packaging>
-    <artifactId>RestApi</artifactId>
+    <artifactId>DataSync</artifactId>
     <dependencies>
         <dependency>
             <groupId>com.dev.bq</groupId>
@@ -22,17 +22,5 @@
             <artifactId>DataBase</artifactId>
             <version>${project.version}</version>
         </dependency>
-        <dependency>
-            <groupId>com.dev.au</groupId>
-            <artifactId>Authentication</artifactId>
-            <version>${project.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>com.dev.ds</groupId>
-            <artifactId>DataSync</artifactId>
-            <version>${project.version}</version>
-        </dependency>
     </dependencies>
-
-
 </project>

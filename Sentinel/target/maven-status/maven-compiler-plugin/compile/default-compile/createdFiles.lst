@@ -1,9 +1,0 @@
-com\dev\sv\server\conf\CacheConfig.class
-com\dev\sv\util\Common.class
-com\dev\sv\server\conf\H2DataConfig.class
-com\dev\sv\swagger\SwaggerConfig.class
-com\dev\sv\server\Application.class
-com\dev\sv\util\ObjectSerialization.class
-com\dev\sv\server\conf\BoSqlDataConfig.class
-com\dev\sv\server\conf\GraphDataConfig.class
-com\dev\sv\server\conf\FmtSqlDataConfig.class

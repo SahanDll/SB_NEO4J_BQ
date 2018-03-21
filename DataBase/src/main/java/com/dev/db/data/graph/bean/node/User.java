@@ -8,6 +8,7 @@ import org.neo4j.ogm.annotation.Property;
 import org.neo4j.ogm.annotation.Relationship;
 import org.springframework.data.annotation.Id;
 
+import java.util.List;
 import java.util.Set;
 
 @JsonIgnoreProperties(value = {"handler"})
@@ -20,6 +21,10 @@ public class User {
     private String userId;
     @Property(name="nric")
     private String nric;
+    @Property(name="portfolio")
+    private List<String> portfolio;
+    @Property(name="watchlist")
+    private List<String> watchlist;
 
     @Relationship(type = "Login", direction = Relationship.INCOMING)
     private Set<Login> login;
@@ -99,12 +104,30 @@ public class User {
         this.nric = nric;
     }
 
+    public List<String> getPortfolio() {
+        return portfolio;
+    }
+
+    public void setPortfolio(List<String> portfolio) {
+        this.portfolio = portfolio;
+    }
+
+    public List<String> getWatchlist() {
+        return watchlist;
+    }
+
+    public void setWatchlist(List<String> watchlist) {
+        this.watchlist = watchlist;
+    }
+
     @Override
     public String toString() {
         return "User{" +
                 "id=" + id +
                 ", userId='" + userId + '\'' +
                 ", nric='" + nric + '\'' +
+                ", portfolio=" + portfolio +
+                ", watchlist=" + watchlist +
                 '}';
     }
 }
