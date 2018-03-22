@@ -1,6 +1,6 @@
-package com.dev.db.data.query.build;
+package com.dev.db.query.build;
 
-import com.dev.db.data.query.filter.SettingMstFilter;
+import com.dev.db.query.filter.SettingMstFilter;
 import com.dev.db.data.sql.fmt.bean.QSettingMst;
 import com.querydsl.core.types.Predicate;
 

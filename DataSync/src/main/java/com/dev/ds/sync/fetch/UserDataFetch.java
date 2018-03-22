@@ -41,7 +41,7 @@ public class UserDataFetch {
 
         try {
             //userDataService.syncSettingMasterData();
-            System.out.println(userDataService.getSettingMasterByIdAndNric((long) 3, "N123"));
+            System.out.println(userDataService.getSettingMasterByIdAndNric((long) 3, "N123452"));
         } catch (Exception e) {
             logger.error("Exception: "+ e.getMessage());
         }

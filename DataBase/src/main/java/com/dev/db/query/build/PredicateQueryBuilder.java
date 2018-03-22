@@ -1,4 +1,4 @@
-package com.dev.db.data.query.build;
+package com.dev.db.query.build;
 
 import com.querydsl.core.types.dsl.BooleanExpression;
 import org.springframework.util.CollectionUtils;

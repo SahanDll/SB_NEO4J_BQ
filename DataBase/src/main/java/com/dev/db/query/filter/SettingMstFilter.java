@@ -1,4 +1,4 @@
-package com.dev.db.data.query.filter;
+package com.dev.db.query.filter;
 
 import lombok.Data;
 

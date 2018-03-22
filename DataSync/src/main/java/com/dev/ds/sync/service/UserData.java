@@ -3,8 +3,8 @@ package com.dev.ds.sync.service;
 import com.dev.db.data.graph.bean.node.User;
 import com.dev.db.data.graph.repository.node.UserRepository;
 import com.dev.db.data.sql.fmt.bean.SettingMst;
-import com.dev.db.data.query.filter.SettingMstFilter;
-import com.dev.db.data.query.build.DynamicQueryGenerator;
+import com.dev.db.query.filter.SettingMstFilter;
+import com.dev.db.query.build.DynamicQueryGenerator;
 import com.dev.db.data.sql.fmt.repository.SettingMstRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -52,7 +52,7 @@ public class UserData {
 
         for(SettingMst ms: settingMstRepository.findAll(DynamicQueryGenerator.settingMstQuery(smf))){
             sMst = ms;
-            System.out.println(ms);
+            //System.out.println(ms);
         }
         return sMst;
     }
