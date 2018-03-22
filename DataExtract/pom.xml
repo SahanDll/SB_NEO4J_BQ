@@ -11,28 +11,4 @@
     <modelVersion>4.0.0</modelVersion>
     <packaging>jar</packaging>
     <artifactId>DataExtract</artifactId>
-
-    <dependencies>
-        <dependency>
-            <groupId>ionic.Msmq</groupId>
-            <artifactId>MsmqJavaRepack</artifactId>
-            <version>1.2.1.2</version>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.nifi</groupId>
-            <artifactId>nifi-site-to-site-client</artifactId>
-            <version>1.5.0</version>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.nifi</groupId>
-            <artifactId>nifi-storm-spout</artifactId>
-            <version>1.5.0</version>
-        </dependency>
-    </dependencies>
-    <repositories>
-        <repository>
-            <id>msmq</id>
-            <url>http://repo.enonic.com/public/</url>
-        </repository>
-    </repositories>
 </project>

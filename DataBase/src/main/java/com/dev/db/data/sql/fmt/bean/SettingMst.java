@@ -1,11 +1,14 @@
 package com.dev.db.data.sql.fmt.bean;
 
+import lombok.Data;
+
 import javax.persistence.*;
 import java.util.Date;
 
 @SuppressWarnings("ALL")
 @Entity
 @Table(name="ClientSettingMst", schema="ALERT")
+@Data
 public class SettingMst {
     @Id
     @Column(name = "IndexId")

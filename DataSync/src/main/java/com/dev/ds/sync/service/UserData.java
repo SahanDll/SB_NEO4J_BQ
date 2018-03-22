@@ -1,20 +1,15 @@
 package com.dev.ds.sync.service;
 
-import com.dev.db.data.graph.bean.edge.*;
 import com.dev.db.data.graph.bean.node.User;
 import com.dev.db.data.graph.repository.node.UserRepository;
-import com.dev.db.data.graph.service.inte.UserService;
 import com.dev.db.data.sql.fmt.bean.SettingMst;
+import com.dev.db.data.query.filter.SettingMstFilter;
+import com.dev.db.data.query.build.DynamicQueryGenerator;
 import com.dev.db.data.sql.fmt.repository.SettingMstRepository;
-import com.google.gson.Gson;
-import org.json.simple.JSONArray;
-import org.json.simple.JSONObject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
-import java.util.Map;
 
 
 /**
@@ -45,6 +40,21 @@ public class UserData {
         }
 
         return status;
+    }
+
+    public SettingMst getSettingMasterByIdAndNric(Long id, String nric) {
+        SettingMst sMst = null;
+        SettingMstFilter smf = new SettingMstFilter();
+        smf.setIndexId(id);
+        smf.setClntNric(nric);
+        //smf.setIndexIdLessThan((long) 5);
+        //smf.setIndexIdGraterThan((long) 2);
+
+        for(SettingMst ms: settingMstRepository.findAll(DynamicQueryGenerator.settingMstQuery(smf))){
+            sMst = ms;
+            System.out.println(ms);
+        }
+        return sMst;
     }
 
 }

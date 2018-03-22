@@ -28,7 +28,7 @@ public class OutputPort {
     private static SiteToSiteClientConfig clientConfig;
     private static LinkedBlockingQueue queue;
 
-    @Scheduled(fixedDelayString = "${const.bq.delay}", initialDelay = 1000L)
+    //@Scheduled(fixedDelayString = "${const.bq.delay}", initialDelay = 1000L)
     public void load() {
         LinkedBlockingQueue queue = fetchData("testPrice");
         if (null != queue) {
