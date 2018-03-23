@@ -1,8 +1,7 @@
 package com.dev.db.data.sql.fmt.repository;
 
-import com.dev.db.data.sql.fmt.bean.SettingMst;
+import com.dev.db.data.sql.fmt.bean.alert.SettingMst;
 
-import com.querydsl.core.types.Predicate;
 import org.springframework.data.querydsl.QuerydslPredicateExecutor;
 import org.springframework.data.repository.CrudRepository;
 

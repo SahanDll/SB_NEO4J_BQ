@@ -1,7 +1,7 @@
 package com.dev.db.data.sql.fmt.service.impl;
 
 
-import com.dev.db.data.sql.fmt.bean.SettingMst;
+import com.dev.db.data.sql.fmt.bean.alert.SettingMst;
 import com.dev.db.data.sql.fmt.repository.SettingMstRepository;
 import com.dev.db.data.sql.fmt.service.inte.SettingMstService;
 

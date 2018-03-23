@@ -9,6 +9,7 @@ import org.neo4j.ogm.annotation.Relationship;
 import org.springframework.data.annotation.Id;
 
 import java.util.List;
+import java.util.Map;
 import java.util.Set;
 
 @JsonIgnoreProperties(value = {"handler"})
@@ -21,10 +22,6 @@ public class User {
     private String userId;
     @Property(name="nric")
     private String nric;
-    @Property(name="portfolio")
-    private List<String> portfolio;
-    @Property(name="watchlist")
-    private List<String> watchlist;
 
     @Relationship(type = "Login", direction = Relationship.INCOMING)
     private Set<Login> login;
@@ -36,6 +33,10 @@ public class User {
     private Set<Downloaded> downloaded;
     @Relationship(type = "Engage", direction = Relationship.INCOMING)
     private Set<Engage> engage;
+    @Relationship(type = "HavingWl", direction = Relationship.INCOMING)
+    private Set<HavingWl> havingWl;
+    @Relationship(type = "HavingPf", direction = Relationship.INCOMING)
+    private Set<HavingPf> havingPf;
 
     public User() {
     }
@@ -80,6 +81,22 @@ public class User {
         this.engage = engage;
     }
 
+    public Set<HavingWl> getHavingWl() {
+        return havingWl;
+    }
+
+    public void setHavingWl(Set<HavingWl> havingWl) {
+        this.havingWl = havingWl;
+    }
+
+    public Set<HavingPf> getHavingPf() {
+        return havingPf;
+    }
+
+    public void setHavingPf(Set<HavingPf> havingPf) {
+        this.havingPf = havingPf;
+    }
+
     public Long getId() {
         return id;
     }
@@ -104,21 +121,6 @@ public class User {
         this.nric = nric;
     }
 
-    public List<String> getPortfolio() {
-        return portfolio;
-    }
-
-    public void setPortfolio(List<String> portfolio) {
-        this.portfolio = portfolio;
-    }
-
-    public List<String> getWatchlist() {
-        return watchlist;
-    }
-
-    public void setWatchlist(List<String> watchlist) {
-        this.watchlist = watchlist;
-    }
 
     @Override
     public String toString() {
@@ -126,8 +128,6 @@ public class User {
                 "id=" + id +
                 ", userId='" + userId + '\'' +
                 ", nric='" + nric + '\'' +
-                ", portfolio=" + portfolio +
-                ", watchlist=" + watchlist +
                 '}';
     }
 }

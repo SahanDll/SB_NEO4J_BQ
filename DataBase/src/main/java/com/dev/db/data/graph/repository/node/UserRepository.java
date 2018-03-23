@@ -13,4 +13,6 @@ import org.springframework.transaction.annotation.Transactional;
 public interface UserRepository extends Neo4jRepository<User, Long> {
 
     User findTop1ByUserId(String userId);
+
+    User findTop1ByNric(String nric);
 }

@@ -188,6 +188,13 @@
         </dependency>
     </dependencies>
 
+    <developers>
+        <developer>
+            <id>sahanDll</id>
+            <name>Sahan Devaka</name>
+            <email>sahandevaka@gmail.com</email>
+        </developer>
+    </developers>
 <!--    <build>
         <plugins>
             <plugin>
