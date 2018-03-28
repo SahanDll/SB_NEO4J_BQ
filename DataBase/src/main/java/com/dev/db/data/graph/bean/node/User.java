@@ -22,6 +22,8 @@ public class User {
     private String userId;
     @Property(name="nric")
     private String nric;
+    @Property(name="alerts")
+    private List<Long> alerts;
 
     @Relationship(type = "Login", direction = Relationship.INCOMING)
     private Set<Login> login;
@@ -121,6 +123,13 @@ public class User {
         this.nric = nric;
     }
 
+    public List<Long> getAlerts() {
+        return alerts;
+    }
+
+    public void setAlerts(List<Long> alerts) {
+        this.alerts = alerts;
+    }
 
     @Override
     public String toString() {

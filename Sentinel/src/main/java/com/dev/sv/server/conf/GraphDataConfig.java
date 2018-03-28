@@ -40,8 +40,6 @@ public class GraphDataConfig {
     @Bean
     public SessionFactory sessionFactory() {
         System.out.println("NEO4J : "+env.getProperty("spring.data.neo4j.username"));
-        System.out.println("NEO4J : "+env.getProperty("spring.data.neo4j.uri"));
-        System.out.println("NEO4J : "+env.getProperty("spring.data.neo4j.password"));
         org.neo4j.ogm.config.Configuration configuration = new org.neo4j.ogm.config.Configuration.Builder()
                 .uri(env.getProperty("spring.data.neo4j.uri"))
                 .credentials(env.getProperty("spring.data.neo4j.username"), env.getProperty("spring.data.neo4j.password"))

@@ -13,6 +13,7 @@ import java.util.List;
  */
 public interface SettingMstRepository extends CrudRepository<SettingMst, Long>  , QuerydslPredicateExecutor<SettingMst> {
 
+    SettingMst findTop1ByIndexId(Long indexId);
     Iterable<SettingMst> findByMobileUuidNot(String mobileUuid);
     Iterable<SettingMst> findByMobileUuid(String mobileUuid);
     List<SettingMst> findByLastModifiedBetweenOrderByLastModifiedDesc(Date from, Date to);

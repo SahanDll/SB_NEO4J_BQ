@@ -1,5 +1,7 @@
 package com.dev.bq.request;
 
+import com.dev.bq.util.IConstants;
+
 import java.io.IOException;
 
 /**
@@ -37,7 +39,7 @@ public class IosQueryFactory {
                         " user_dim.device_info.user_default_language," +//9
                         " user_dim.device_info.device_time_zone_offset_seconds," +//10
                         " user_dim.device_info.limited_ad_tracking" +//11
-                        " FROM [com_mayBank_MKETradeUAT_IOS.app_events_"+date+"]" +
+                        " FROM ["+ IConstants.IosTableName+date+"]" +
                         " WHERE (user_dim.user_id <> '-1'" +
                         " AND user_dim.user_id <> 'null')" +
                         " LIMIT "+records;
@@ -56,7 +58,7 @@ public class IosQueryFactory {
                         " user_dim.device_info.user_default_language," +//9
                         " user_dim.device_info.device_time_zone_offset_seconds," +//10
                         " user_dim.device_info.limited_ad_tracking" +//11
-                        " FROM [com_mayBank_MKETradeUAT_IOS.app_events_"+date+"]" +
+                        " FROM ["+ IConstants.IosTableName+date+"]" +
                         " WHERE (user_dim.user_id <> '-1'" +
                         " AND user_dim.user_id <> 'null')" ;
                 break;
@@ -67,7 +69,7 @@ public class IosQueryFactory {
                         " user_dim.geo_info.country," +//2
                         " user_dim.geo_info.region," +//3
                         " user_dim.geo_info.city" +//4
-                        " FROM [com_mayBank_MKETradeUAT_IOS.app_events_"+date+"]" +
+                        " FROM ["+ IConstants.IosTableName+date+"]" +
                         " WHERE (user_dim.user_id <> '-1'" +
                         " AND user_dim.user_id <> 'null')" +
                         " LIMIT "+records;
@@ -79,7 +81,7 @@ public class IosQueryFactory {
                         " user_dim.geo_info.country," +//2
                         " user_dim.geo_info.region," +//3
                         " user_dim.geo_info.city" +//4
-                        " FROM [com_mayBank_MKETradeUAT_IOS.app_events_"+date+"]"+
+                        " FROM ["+ IConstants.IosTableName+date+"]" +
                         " WHERE (user_dim.user_id <> '-1'" +
                         " AND user_dim.user_id <> 'null')";
                 break;
@@ -91,7 +93,7 @@ public class IosQueryFactory {
                         " user_dim.app_info.app_store," +//3
                         " user_dim.app_info.app_platform," +//4
                         " user_dim.app_info.app_id" +//5
-                        " FROM [com_mayBank_MKETradeUAT_IOS.app_events_"+date+"]" +
+                        " FROM ["+ IConstants.IosTableName+date+"]" +
                         " WHERE (user_dim.user_id <> '-1'" +
                         " AND user_dim.user_id <> 'null')" +
                         " LIMIT "+records;
@@ -104,7 +106,7 @@ public class IosQueryFactory {
                         " user_dim.app_info.app_store," +//3
                         " user_dim.app_info.app_platform," +//4
                         " user_dim.app_info.app_id" +//5
-                        " FROM [com_mayBank_MKETradeUAT_IOS.app_events_"+date+"]" +
+                        " FROM ["+ IConstants.IosTableName+date+"]" +
                         " WHERE (user_dim.user_id <> '-1'" +
                         " AND user_dim.user_id <> 'null')";
                 break;
@@ -115,7 +117,7 @@ public class IosQueryFactory {
                         " event_dim.params.key," +
                         " event_dim.params.value.string_value," +
                         " event_dim.timestamp_micros" +
-                        " FROM [com_mayBank_MKETradeUAT_IOS.app_events_"+date+"]" +
+                        " FROM ["+ IConstants.IosTableName+date+"]" +
                         " WHERE user_dim.user_id <> '-1'" +
                         " AND user_dim.user_id <> 'null'" +
                         " AND event_dim.name= 'screen_view'" +
@@ -130,7 +132,7 @@ public class IosQueryFactory {
                         " event_dim.params.key," +
                         " event_dim.params.value.string_value," +
                         " event_dim.timestamp_micros" +
-                        " FROM [com_mayBank_MKETradeUAT_IOS.app_events_"+date+"]" +
+                        " FROM ["+ IConstants.IosTableName+date+"]" +
                         " WHERE user_dim.user_id <> '-1'" +
                         " AND user_dim.user_id <> 'null'" +
                         " AND event_dim.name= 'screen_view'" +
@@ -145,7 +147,7 @@ public class IosQueryFactory {
                         " event_dim.params.value.int_value," +//3
                         " event_dim.timestamp_micros," +//4
                         " event_dim.params.value.string_value" +//5
-                        " FROM [com_mayBank_MKETradeUAT_IOS.app_events_"+date+"]" +
+                        " FROM ["+ IConstants.IosTableName+date+"]" +
                         " WHERE user_dim.user_id <> '-1'" +
                         " AND user_dim.user_id <> 'null'" +
                         " AND event_dim.name= 'user_engagement'" +
@@ -161,11 +163,44 @@ public class IosQueryFactory {
                         " event_dim.params.value.int_value," +//3
                         " event_dim.timestamp_micros," +//4
                         " event_dim.params.value.string_value" +//5
-                        " FROM [com_mayBank_MKETradeUAT_IOS.app_events_"+date+"]" +
+                        " FROM ["+ IConstants.IosTableName+date+"]" +
                         " WHERE user_dim.user_id <> '-1'" +
                         " AND user_dim.user_id <> 'null'" +
                         " AND event_dim.name= 'user_engagement'" +
                         " AND (event_dim.params.key = 'engagement_time_msec' OR event_dim.params.key = 'firebase_screen')" +
+                        " ORDER BY user_dim.user_id desc, event_dim.timestamp_micros asc, event_dim.params.key desc";
+                break;
+            case 11:
+                query = "SELECT" +
+                        " user_dim.user_id," +//0
+                        " event_dim.name," +//1
+                        " event_dim.params.key," +//2
+                        " event_dim.params.value.string_value," +//3
+                        " event_dim.params.value.int_value," +//4
+                        " event_dim.params.value.float_value," +//5
+                        " event_dim.params.value.double_value," +//6
+                        " event_dim.timestamp_micros" +//7
+                        " FROM ["+ IConstants.IosTableName+date+"]" +
+                        " WHERE user_dim.user_id <> '-1'" +
+                        " AND user_dim.user_id <> 'null'" +
+                        " AND event_dim.name = 'Trade'" +
+                        " ORDER BY user_dim.user_id desc, event_dim.timestamp_micros asc, event_dim.params.key desc" +
+                        " LIMIT "+records;
+                break;
+            case 12:
+                query = "SELECT" +
+                        " user_dim.user_id," +//0
+                        " event_dim.name," +//1
+                        " event_dim.params.key," +//2
+                        " event_dim.params.value.string_value," +//3
+                        " event_dim.params.value.int_value," +//4
+                        " event_dim.params.value.float_value," +//5
+                        " event_dim.params.value.double_value," +//6
+                        " event_dim.timestamp_micros" +//7
+                        " FROM ["+ IConstants.IosTableName+date+"]" +
+                        " WHERE user_dim.user_id <> '-1'" +
+                        " AND user_dim.user_id <> 'null'" +
+                        " AND event_dim.name = 'Trade'" +
                         " ORDER BY user_dim.user_id desc, event_dim.timestamp_micros asc, event_dim.params.key desc";
                 break;
             default:

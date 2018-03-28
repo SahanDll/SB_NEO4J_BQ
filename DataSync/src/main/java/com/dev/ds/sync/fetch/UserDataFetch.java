@@ -12,8 +12,10 @@ public class UserDataFetch {
     private static final Logger logger = LoggerFactory.getLogger(UserDataFetch.class);
     @Autowired
     UserDataService userDataService;
-    @Scheduled(fixedRate=10000)
-    public void fetchSingleData(){
+
+    //@Scheduled(fixedRate=10000)
+    //@Scheduled(cron = "0 0 2 * * *")
+    public void syncFmtData(){
 /*        String apiUrl = "http://localhost:8381/fmt-sentinel/api/data-sync/user-data";
         RestTemplate restTemplate = new RestTemplate();
         try {
@@ -32,15 +34,15 @@ public class UserDataFetch {
         }*/
 
         try {
-           // userDataService.syncSettingMasterData();
-            System.out.println("==========================================SMF PORTFOLIO==================================");
-            userDataService.syncSmfPortfolioData();
-            System.out.println("==========================================ECOS PORTFOLIO==================================");
-            userDataService.syncEcosPortfolioData();
-            System.out.println("==========================================SMF WATCHLIST==================================");
-            userDataService.syncSmfWatchlistData();
-            System.out.println("==========================================ECOS WATCHLIST==================================");
-            userDataService.syncEcosWatchlistData();
+            logger.info("==========================================================================");
+            logger.info("Sync Alert - Setting Master : " + userDataService.syncSettingMasterData());
+            logger.info("Sync Alert - Alert Fire Log : " + userDataService.syncAlertData());
+            logger.info("Sync Smf - Portfolio : " + userDataService.syncSmfPortfolioData());
+            logger.info("Sync Smf - Watchlist : " + userDataService.syncSmfWatchlistData());
+            logger.info("Sync Ecos - Portfolio : " + userDataService.syncEcosPortfolioData());
+            logger.info("Sync Ecos - Watchlist : " + userDataService.syncEcosWatchlistData());
+            logger.info("==========================================================================");
+            logger.info("\n");
             //System.out.println(userDataService.getSettingMasterByIdAndNric((long) 3, "N123452"));
         } catch (Exception e) {
             logger.error("Exception: "+ e.getMessage());
