@@ -2,6 +2,7 @@ package com.dev.db.data.graph.service.impl;
 
 import com.dev.db.data.graph.bean.edge.*;
 import com.dev.db.data.graph.bean.node.User;
+import com.dev.db.data.graph.model.NotificationClickUser;
 import com.dev.db.data.graph.repository.node.UserRepository;
 import com.dev.db.data.graph.service.inte.UserService;
 import com.google.gson.Gson;
@@ -13,6 +14,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.Map;
 
 
@@ -231,5 +233,91 @@ public class UserServiceImpl implements UserService {
             logger.error("Error ", e);
         }
         return main;
+    }
+
+    @Override
+    public User updateNotificationClick(NotificationClickUser user) {
+        User us = userRepository.findTop1ByUserId(user.getUserId());
+        if (null == us){
+            us = new User();
+            us.setUserId(user.getUserId());
+        }
+
+        switch (user.getType()){
+            case "N":
+                if(null == us.getNewsClick()){
+                    us.setNewsClick(new ArrayList<>());
+                }
+                if(!us.getNewsClick().contains(user.getTime())){
+                    us.getNewsClick().add(user.getTime());
+                }
+                break;
+            case "W":
+                if(null == us.getPriceClick()){
+                    us.setPriceClick(new ArrayList<>());
+                }
+                if(!us.getPriceClick().contains(user.getTime())){
+                    us.getPriceClick().add(user.getTime());
+                }
+                break;
+            case "P":
+                if(null == us.getPortfolioClick()){
+                    us.setPortfolioClick(new ArrayList<>());
+                }
+                if(!us.getPortfolioClick().contains(user.getTime())){
+                    us.getPortfolioClick().add(user.getTime());
+                }
+                break;
+            case "C":
+                if(null == us.getPaymentClick()){
+                    us.setPaymentClick(new ArrayList<>());
+                }
+                if(!us.getPaymentClick().contains(user.getTime())){
+                    us.getPaymentClick().add(user.getTime());
+                }
+                break;
+            case "E":
+                if(null == us.getEntitlementClick()){
+                    us.setEntitlementClick(new ArrayList<>());
+                }
+                if(!us.getEntitlementClick().contains(user.getTime())){
+                    us.getEntitlementClick().add(user.getTime());
+                }
+                break;
+            case "I":
+                if(null == us.getInsightClick()){
+                    us.setInsightClick(new ArrayList<>());
+                }
+                if(!us.getInsightClick().contains(user.getTime())){
+                    us.getInsightClick().add(user.getTime());
+                }
+                break;
+            case "S":
+                if(null == us.getSystemClick()){
+                    us.setSystemClick(new ArrayList<>());
+                }
+                if(!us.getSystemClick().contains(user.getTime())){
+                    us.getSystemClick().add(user.getTime());
+                }
+                break;
+            case "J":
+                if(null == us.getJillClick()){
+                    us.setJillClick(new ArrayList<>());
+                }
+                if(!us.getJillClick().contains(user.getTime())){
+                    us.getJillClick().add(user.getTime());
+                }
+                break;
+            case "O":
+                if(null == us.getOrderClick()){
+                    us.setOrderClick(new ArrayList<>());
+                }
+                if(!us.getOrderClick().contains(user.getTime())){
+                    us.getOrderClick().add(user.getTime());
+                }
+                break;
+        }
+
+        return userRepository.save(us);
     }
 }

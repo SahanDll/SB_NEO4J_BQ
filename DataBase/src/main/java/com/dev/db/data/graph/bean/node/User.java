@@ -24,6 +24,24 @@ public class User {
     private String nric;
     @Property(name="alerts")
     private List<Long> alerts;
+    @Property(name="news-click")
+    private List<Long> newsClick;
+    @Property(name="price-click")
+    private List<Long> priceClick;
+    @Property(name="portfolio-click")
+    private List<Long> portfolioClick;
+    @Property(name="payment-click")
+    private List<Long> paymentClick;
+    @Property(name="entitlement-click")
+    private List<Long> entitlementClick;
+    @Property(name="insight-click")
+    private List<Long> insightClick;
+    @Property(name="system-click")
+    private List<Long> systemClick;
+    @Property(name="jill-click")
+    private List<Long> jillClick;
+    @Property(name="order-click")
+    private List<Long> orderClick;
 
     @Relationship(type = "Login", direction = Relationship.INCOMING)
     private Set<Login> login;
@@ -129,6 +147,78 @@ public class User {
 
     public void setAlerts(List<Long> alerts) {
         this.alerts = alerts;
+    }
+
+    public List<Long> getNewsClick() {
+        return newsClick;
+    }
+
+    public void setNewsClick(List<Long> newsClick) {
+        this.newsClick = newsClick;
+    }
+
+    public List<Long> getPriceClick() {
+        return priceClick;
+    }
+
+    public void setPriceClick(List<Long> priceClick) {
+        this.priceClick = priceClick;
+    }
+
+    public List<Long> getPortfolioClick() {
+        return portfolioClick;
+    }
+
+    public void setPortfolioClick(List<Long> portfolioClick) {
+        this.portfolioClick = portfolioClick;
+    }
+
+    public List<Long> getPaymentClick() {
+        return paymentClick;
+    }
+
+    public void setPaymentClick(List<Long> paymentClick) {
+        this.paymentClick = paymentClick;
+    }
+
+    public List<Long> getEntitlementClick() {
+        return entitlementClick;
+    }
+
+    public void setEntitlementClick(List<Long> entitlementClick) {
+        this.entitlementClick = entitlementClick;
+    }
+
+    public List<Long> getInsightClick() {
+        return insightClick;
+    }
+
+    public void setInsightClick(List<Long> insightClick) {
+        this.insightClick = insightClick;
+    }
+
+    public List<Long> getSystemClick() {
+        return systemClick;
+    }
+
+    public void setSystemClick(List<Long> systemClick) {
+        this.systemClick = systemClick;
+    }
+
+    public List<Long> getJillClick() {
+        return jillClick;
+    }
+
+    public void setJillClick(List<Long> jillClick) {
+        this.jillClick = jillClick;
+    }
+
+    public List<Long> getOrderClick() {
+        return orderClick;
+    }
+
+    public void setOrderClick(List<Long> orderClick) {
+        this.orderClick = orderClick;
     }
 
     @Override

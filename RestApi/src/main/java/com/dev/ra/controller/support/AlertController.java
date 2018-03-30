@@ -21,8 +21,8 @@ import java.util.Map;
 
 @RestController
 @RequestMapping("/api/pns")
-public class NotificationController {
-    private static final org.slf4j.Logger logger = LoggerFactory.getLogger(NotificationController.class);
+public class AlertController {
+    private static final org.slf4j.Logger logger = LoggerFactory.getLogger(AlertController.class);
 
     @RequestMapping(value = "/send", method = RequestMethod.GET)
     public ResponseEntity<String> sendDefault(@RequestParam("nric") String nric) {

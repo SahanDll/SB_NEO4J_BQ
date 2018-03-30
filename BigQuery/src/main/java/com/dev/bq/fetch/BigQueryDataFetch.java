@@ -55,10 +55,14 @@ public class BigQueryDataFetch {
         Response responseA5 = request.get("engage/sync-android-data");
         TimeUnit.SECONDS.sleep(5);
         Response responseI5 = request.get("engage/sync-ios-data");
-        TimeUnit.SECONDS.sleep(5);*/
+        TimeUnit.SECONDS.sleep(5);
         Response responseA6 = request.get("trade/sync-android-data");
         TimeUnit.SECONDS.sleep(5);
         Response responseI6 = request.get("trade/sync-ios-data");
+        TimeUnit.SECONDS.sleep(5);*/
+        Response responseA6 = request.get("notification/clicked/sync-android-data");
+        TimeUnit.SECONDS.sleep(5);
+        Response responseI6 = request.get("notification/clicked/sync-ios-data");
         TimeUnit.SECONDS.sleep(5);
         System.exit(0);
     }
