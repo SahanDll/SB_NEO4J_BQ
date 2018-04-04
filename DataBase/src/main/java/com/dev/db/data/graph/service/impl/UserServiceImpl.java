@@ -15,6 +15,7 @@ import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.Map;
 
 
@@ -172,13 +173,15 @@ public class UserServiceImpl implements UserService {
             List<Long> downloaded = new ArrayList<>();
             List<Long> view = new ArrayList<>();
             List<Long> engage = new ArrayList<>();*/
-            JSONArray using = new JSONArray();
-            JSONArray login = new JSONArray();
-            JSONArray downloaded = new JSONArray();
-            JSONArray view = new JSONArray();
-            JSONArray engage = new JSONArray();
             for (User us : userRepository.findAll()) {
-/*                if (null != us.getUsing()) {
+
+                JSONArray using = new JSONArray();
+                JSONArray login = new JSONArray();
+                JSONArray downloaded = new JSONArray();
+                JSONArray view = new JSONArray();
+                JSONArray engage = new JSONArray();
+
+                if (null != us.getUsing()) {
                     for(Using ui : us.getUsing()){
                         ui.setUser(null);
                         using.add(ui);
@@ -207,23 +210,24 @@ public class UserServiceImpl implements UserService {
                         eg.setUser(null);
                         engage.add(eg);
                     }
-                }*/
+                }
                 JSONObject user = new JSONObject();
                 user.put("Id", us.getId());
                 user.put("userId", us.getUserId());
-                user.put("familyType", us.getUserId());
-                user.put("name", us.getUserId());
-                user.put("vendor", "Sentinel");
-                user.put("model", "UserAll");
-                user.put("protocol", us.getUserId());
-                user.put("address", "192.168.0.1");
+                //user.put("familyType", us.getUserId());
+                //user.put("name", us.getUserId());
+                //user.put("vendor", "Sentinel");
+                //user.put("model", "UserAll");
+                //user.put("protocol", us.getUserId());
+                //user.put("address", "192.168.0.1");
 
-/*                user.put("rel-using", using);
+                user.put("rel-using", using);
                 user.put("rel-downloaded", downloaded);
                 user.put("rel-login", login);
                 user.put("rel-view", view);
-                user.put("rel-engage", engage);*/
+                user.put("rel-engage", engage);
 
+                //System.out.println(gson.toJson(user));
                 //result.add(gson.toJson(user));
                 result.add(user);
             }
@@ -236,84 +240,85 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public User updateNotificationClick(NotificationClickUser user) {
-        User us = userRepository.findTop1ByUserId(user.getUserId());
+    public User updateNotificationClick(NotificationClickUser ncu) {
+        User us = userRepository.findTop1ByUserId(ncu.getUserId());
         if (null == us){
             us = new User();
-            us.setUserId(user.getUserId());
+            us.setUserId(ncu.getUserId());
+            us.setFirstLogin(new Date());
         }
 
-        switch (user.getType()){
+        switch (ncu.getType()){
             case "N":
                 if(null == us.getNewsClick()){
                     us.setNewsClick(new ArrayList<>());
                 }
-                if(!us.getNewsClick().contains(user.getTime())){
-                    us.getNewsClick().add(user.getTime());
+                if(!us.getNewsClick().contains(ncu.getTime())){
+                    us.getNewsClick().add(ncu.getTime());
                 }
                 break;
             case "W":
                 if(null == us.getPriceClick()){
                     us.setPriceClick(new ArrayList<>());
                 }
-                if(!us.getPriceClick().contains(user.getTime())){
-                    us.getPriceClick().add(user.getTime());
+                if(!us.getPriceClick().contains(ncu.getTime())){
+                    us.getPriceClick().add(ncu.getTime());
                 }
                 break;
             case "P":
                 if(null == us.getPortfolioClick()){
                     us.setPortfolioClick(new ArrayList<>());
                 }
-                if(!us.getPortfolioClick().contains(user.getTime())){
-                    us.getPortfolioClick().add(user.getTime());
+                if(!us.getPortfolioClick().contains(ncu.getTime())){
+                    us.getPortfolioClick().add(ncu.getTime());
                 }
                 break;
             case "C":
                 if(null == us.getPaymentClick()){
                     us.setPaymentClick(new ArrayList<>());
                 }
-                if(!us.getPaymentClick().contains(user.getTime())){
-                    us.getPaymentClick().add(user.getTime());
+                if(!us.getPaymentClick().contains(ncu.getTime())){
+                    us.getPaymentClick().add(ncu.getTime());
                 }
                 break;
             case "E":
                 if(null == us.getEntitlementClick()){
                     us.setEntitlementClick(new ArrayList<>());
                 }
-                if(!us.getEntitlementClick().contains(user.getTime())){
-                    us.getEntitlementClick().add(user.getTime());
+                if(!us.getEntitlementClick().contains(ncu.getTime())){
+                    us.getEntitlementClick().add(ncu.getTime());
                 }
                 break;
             case "I":
                 if(null == us.getInsightClick()){
                     us.setInsightClick(new ArrayList<>());
                 }
-                if(!us.getInsightClick().contains(user.getTime())){
-                    us.getInsightClick().add(user.getTime());
+                if(!us.getInsightClick().contains(ncu.getTime())){
+                    us.getInsightClick().add(ncu.getTime());
                 }
                 break;
             case "S":
                 if(null == us.getSystemClick()){
                     us.setSystemClick(new ArrayList<>());
                 }
-                if(!us.getSystemClick().contains(user.getTime())){
-                    us.getSystemClick().add(user.getTime());
+                if(!us.getSystemClick().contains(ncu.getTime())){
+                    us.getSystemClick().add(ncu.getTime());
                 }
                 break;
             case "J":
                 if(null == us.getJillClick()){
                     us.setJillClick(new ArrayList<>());
                 }
-                if(!us.getJillClick().contains(user.getTime())){
-                    us.getJillClick().add(user.getTime());
+                if(!us.getJillClick().contains(ncu.getTime())){
+                    us.getJillClick().add(ncu.getTime());
                 }
                 break;
             case "O":
                 if(null == us.getOrderClick()){
                     us.setOrderClick(new ArrayList<>());
                 }
-                if(!us.getOrderClick().contains(user.getTime())){
-                    us.getOrderClick().add(user.getTime());
+                if(!us.getOrderClick().contains(ncu.getTime())){
+                    us.getOrderClick().add(ncu.getTime());
                 }
                 break;
         }

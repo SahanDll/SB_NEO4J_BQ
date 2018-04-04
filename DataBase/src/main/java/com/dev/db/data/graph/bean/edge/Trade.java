@@ -23,7 +23,8 @@ public class Trade {
     @Property(name="user_id")
     private String userId;
     @Property(name="trade_time")
-    private Long tradeTime;
+    @DateLong
+    private Date tradeTime;
     @Property(name="screen")
     private String screen;
     @Property(name="order_type")
@@ -80,11 +81,11 @@ public class Trade {
         this.userId = userId;
     }
 
-    public Long getTradeTime() {
+    public Date getTradeTime() {
         return tradeTime;
     }
 
-    public void setTradeTime(Long tradeTime) {
+    public void setTradeTime(Date tradeTime) {
         this.tradeTime = tradeTime;
     }
 

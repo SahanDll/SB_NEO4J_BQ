@@ -52,10 +52,10 @@ public class ViewAdapter {
 
                         View vi = new View(us, st);
                         vi.setUserId(row.getF().get(0).get("v").toString());
-                        vi.getViewTime().add(Long.parseLong(row.getF().get(4).get("v").toString()));
+                        vi.getViewTime().add(Long.parseLong(row.getF().get(4).get("v").toString())/1000);
                         vi.setFromScreenName(st.getPreviousScreen());
                         vi.setToScreenName(st.getScreen());
-                        vi.setCreateDate(Common.getBackDate(-1));
+                        vi.setCreateDate(Common.getCurrentDate());
                         list.add(vi);
                         st = null;
                     }

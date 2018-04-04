@@ -7,8 +7,10 @@ package com.dev.ra.controller.nodes;
 import com.dev.bq.request.BigQueryRequest;
 import com.dev.db.data.graph.adapter.NotificationAdapter;
 import com.dev.db.data.graph.adapter.TradeAdapter;
+import com.dev.db.data.graph.bean.edge.Open;
 import com.dev.db.data.graph.bean.edge.Trade;
 import com.dev.db.data.graph.model.NotificationClickUser;
+import com.dev.db.data.graph.service.inte.OpenService;
 import com.dev.db.data.graph.service.inte.TradeService;
 import com.dev.db.data.graph.service.inte.UserService;
 import com.google.api.services.bigquery.model.GetQueryResultsResponse;
@@ -28,6 +30,8 @@ public class NotificationController {
     private static final org.slf4j.Logger logger = LoggerFactory.getLogger(NotificationController.class);
     @Autowired
     UserService userService;
+    @Autowired
+    OpenService openService;
     @Value("${const.bq.backDate}")
     private int backDate;
 
@@ -61,6 +65,44 @@ public class NotificationController {
             if (null != response) {
                 for(NotificationClickUser ncu: NotificationAdapter.getInstance().syncClickedData(response.getRows())){
                     System.out.println(userService.updateNotificationClick(ncu));
+                }
+            }
+        } catch (IOException e) {
+            logger.error("Controller Error : ", e);
+        }
+        return response;
+    }
+
+    /**
+     * GET /read  --> Read all popularSearch from the database.
+     */
+    @RequestMapping(value = "/open/sync-android-data", method = RequestMethod.GET)
+    public GetQueryResultsResponse syncAndroidOpenData() {
+        GetQueryResultsResponse response = null;
+        try {
+            response = BigQueryRequest.getInstance().dispatchAndroidQueryRequest(16, backDate, 3);
+            if (null != response) {
+                for(Open op: NotificationAdapter.getInstance().syncOpenData(response.getRows())){
+                    System.out.println(openService.create(op));
+                }
+            }
+        } catch (IOException e) {
+            logger.error("Controller Error : ", e);
+        }
+        return response;
+    }
+
+    /**
+     * GET /read  --> Read all popularSearch from the database.
+     */
+    @RequestMapping(value = "/open/sync-ios-data", method = RequestMethod.GET)
+    public GetQueryResultsResponse syncIosOpenData() {
+        GetQueryResultsResponse response = null;
+        try {
+            response = BigQueryRequest.getInstance().dispatchIosQueryRequest(16, backDate, 3);
+            if (null != response) {
+                for(Open op: NotificationAdapter.getInstance().syncOpenData(response.getRows())){
+                    System.out.println(openService.create(op));
                 }
             }
         } catch (IOException e) {

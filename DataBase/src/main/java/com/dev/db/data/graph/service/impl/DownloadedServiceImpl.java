@@ -16,6 +16,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
@@ -38,6 +39,9 @@ public class DownloadedServiceImpl implements DownloadedService {
     public Downloaded create(Downloaded downloaded) {
         Downloaded dl = downloadedRepository.findTop1ByUserIdAndVersionAndPlatform(downloaded.getUserId(), downloaded.getVersion(), downloaded.getPlatform());
         User us = userRepository.findTop1ByUserId(downloaded.getUserId());
+        if(null == us){
+            downloaded.getUser().setFirstLogin(new Date());
+        }
         AppInfo ai = appInfoRepository.findTop1ByAppVersion(downloaded.getVersion());
         if(null == dl){
             if(null != us){

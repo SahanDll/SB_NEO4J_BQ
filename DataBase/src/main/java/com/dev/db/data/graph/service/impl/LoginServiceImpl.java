@@ -16,6 +16,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
@@ -37,6 +38,9 @@ public class LoginServiceImpl implements LoginService {
     public Login create(Login login) {
         Login li = loginRepository.findTop1ByUserIdAndLocationAndPlatform(login.getUserId(), login.getLocation(), login.getPlatform());
         User us = userRepository.findTop1ByUserId(login.getUserId());
+        if(null == us){
+            login.getUser().setFirstLogin(new Date());
+        }
         GeoInfo gi = geoInfoRepository.findTop1ByCity(login.getLocation());
         if(null == li){
             if(null != us){

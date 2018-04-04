@@ -42,6 +42,16 @@ public class Common {
         return calendar.getTime();
     }
 
+    public static Date getCurrentDate() {
+        Calendar calendar = null;
+        try {
+            calendar = Calendar.getInstance();
+        } catch (Exception e) {
+            LOGGER.error("{\"error\" : \"" + e.getMessage() + "\"}");
+        }
+        return calendar.getTime();
+    }
+
     public static Date getEndOfDay(Date date) {
         LocalDateTime localDateTime = dateToLocalDateTime(date);
         LocalDateTime endOfDay = localDateTime.with(LocalTime.MAX);

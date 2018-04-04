@@ -88,7 +88,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Override
     public void configure(WebSecurity web) throws Exception {
-        web.ignoring().antMatchers( "/api/check/**", "/api/asyncCheck/**", "/api/asyncTest/**", "/api/chatBot/**", "/h2-console/**", "/api/addLoginDetail/**", "/api/user-login/authenticateUser/**", "/api/user-login/getPublicKey/**",  "/api/user-login/encrypt-password/**",  "/api/user-login/auth-token/**",  "/api/user-login/auth-base/**", "/api/pns/send/**", "/health/**");
+        web.ignoring().antMatchers( "/api/check/**", "/api/asyncCheck/**", "/api/asyncTest/**", "/api/chatBot/**", "/h2-console/**", "/api/addLoginDetail/**", "/api/user-login/authenticateUser/**", "/api/user-login/getPublicKey/**",  "/api/user-login/encrypt-password/**",  "/api/user-login/auth-token/**",  "/api/user-login/auth-base/**", "/api/pns/send/**", "/health/**", "/api/view/read-all/**", "/api/user/read-all/**", "/api/user/read-by-user/**", "/api/trade/read-all/**");
         web.ignoring().antMatchers("/sam/**", "/sam/index.html", "/sam/html/**", "/sam/html/model/**", "/sam/image/**", "/sam/script/**", "/sam/customScript/**", "/sam/css/**", "/sam/fonts/**");
         web.ignoring().antMatchers("/v2/api-docs", "/configuration/ui", "/swagger-resources/**", "/configuration/**", "/swagger-ui.html", "/webjars/**");
     }

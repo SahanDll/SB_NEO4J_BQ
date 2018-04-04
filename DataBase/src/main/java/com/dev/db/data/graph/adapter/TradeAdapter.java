@@ -66,8 +66,8 @@ public class TradeAdapter {
                     us.setUserId(row.getF().get(0).get("v").toString());
                     trd = new Trade(us, stk);
                     trd.setUserId(us.getUserId());
-                    trd.setTradeTime(recordTime);
-                    trd.setCreateDate(new Date());
+                    trd.setTradeTime(new Date(recordTime/1000));
+                    trd.setCreateDate(Common.getCurrentDate());
                 }
                 if(!Data.isNull(row.getF().get(2).get("v"))) {
                     switch (row.getF().get(2).get("v").toString()) {

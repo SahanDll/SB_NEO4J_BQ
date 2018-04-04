@@ -16,6 +16,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
@@ -38,6 +39,9 @@ public class EngageServiceImpl implements EngageService {
     public Engage create(Engage engage) {
         Engage eg = engageRepository.findTop1ByUserIdAndScreenNameAndPlatform(engage.getUserId(), engage.getScreenName(), engage.getPlatform());
         User us = userRepository.findTop1ByUserId(engage.getUserId());
+        if(null == us){
+            engage.getUser().setFirstLogin(new Date());
+        }
         ScreenEngagement se = screenEngagementRepository.findTop1ByScreen(engage.getScreenName());
         if(null == eg){
             if(null != us){

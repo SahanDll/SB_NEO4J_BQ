@@ -56,7 +56,7 @@ public class UsingAdapter {
             Using ui = new Using(us, di);
             ui.setUserId(row.getF().get(0).get("v").toString());
             ui.setDevice(di.getDeviceModel());
-            ui.setCreateDate(Common.getBackDate(-1));
+            ui.setCreateDate(Common.getCurrentDate());
             list.add(ui);
         }
         return list;

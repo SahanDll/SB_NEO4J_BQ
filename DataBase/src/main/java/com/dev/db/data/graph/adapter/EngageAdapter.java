@@ -48,7 +48,7 @@ public class EngageAdapter {
                         us = new User();
                         us.setUserId(row.getF().get(0).get("v").toString());
 
-                        se.setViewTime(Long.parseLong(row.getF().get(4).get("v").toString()));
+                        se.setViewTime(Long.parseLong(row.getF().get(4).get("v").toString())/1000);
                         se.setViewLength(Long.parseLong(row.getF().get(3).get("v").toString()));
 
                         Engage eg = new Engage(us, se);
@@ -56,7 +56,7 @@ public class EngageAdapter {
                         eg.getViewTime().add(se.getViewTime());
                         eg.getViewLength().add(se.getViewLength());
                         eg.setScreenName(se.getScreen());
-                        eg.setCreateDate(Common.getBackDate(-1));
+                        eg.setCreateDate(Common.getCurrentDate());
                         list.add(eg);
                         se = null;
                     }

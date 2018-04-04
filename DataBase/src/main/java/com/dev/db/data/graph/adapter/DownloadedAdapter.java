@@ -50,7 +50,7 @@ public class DownloadedAdapter {
             Downloaded dl = new Downloaded(us, ai);
             dl.setUserId(row.getF().get(0).get("v").toString());
             dl.setVersion(ai.getAppVersion());
-            dl.setCreateDate(Common.getBackDate(-1));
+            dl.setCreateDate(Common.getCurrentDate());
             list.add(dl);
         }
         return list;

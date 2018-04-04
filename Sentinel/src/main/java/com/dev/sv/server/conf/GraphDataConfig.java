@@ -43,6 +43,7 @@ public class GraphDataConfig {
         org.neo4j.ogm.config.Configuration configuration = new org.neo4j.ogm.config.Configuration.Builder()
                 .uri(env.getProperty("spring.data.neo4j.uri"))
                 .credentials(env.getProperty("spring.data.neo4j.username"), env.getProperty("spring.data.neo4j.password"))
+                .connectionPoolSize(200)
                 .build();
         return new SessionFactory(configuration, "com.dev.db.data.graph");
     }

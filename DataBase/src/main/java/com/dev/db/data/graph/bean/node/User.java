@@ -2,12 +2,11 @@ package com.dev.db.data.graph.bean.node;
 
 import com.dev.db.data.graph.bean.edge.*;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import org.neo4j.ogm.annotation.GraphId;
-import org.neo4j.ogm.annotation.NodeEntity;
-import org.neo4j.ogm.annotation.Property;
-import org.neo4j.ogm.annotation.Relationship;
+import org.neo4j.ogm.annotation.*;
+import org.neo4j.ogm.annotation.typeconversion.DateLong;
 import org.springframework.data.annotation.Id;
 
+import java.util.Date;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
@@ -22,6 +21,9 @@ public class User {
     private String userId;
     @Property(name="nric")
     private String nric;
+    @Property(name="first-login")
+    @DateLong
+    private Date firstLogin;
     @Property(name="alerts")
     private List<Long> alerts;
     @Property(name="news-click")
@@ -43,19 +45,19 @@ public class User {
     @Property(name="order-click")
     private List<Long> orderClick;
 
-    @Relationship(type = "Login", direction = Relationship.INCOMING)
+    @Relationship(type = "Login", direction = Relationship.OUTGOING)
     private Set<Login> login;
-    @Relationship(type = "Using", direction = Relationship.INCOMING)
+    @Relationship(type = "Using", direction = Relationship.OUTGOING)
     private Set<Using> using;
-    @Relationship(type = "View", direction = Relationship.INCOMING)
+    @Relationship(type = "View", direction = Relationship.OUTGOING)
     private Set<View> view;
-    @Relationship(type = "Downloaded", direction = Relationship.INCOMING)
+    @Relationship(type = "Downloaded", direction = Relationship.OUTGOING)
     private Set<Downloaded> downloaded;
-    @Relationship(type = "Engage", direction = Relationship.INCOMING)
+    @Relationship(type = "Engage", direction = Relationship.OUTGOING)
     private Set<Engage> engage;
-    @Relationship(type = "HavingWl", direction = Relationship.INCOMING)
+    @Relationship(type = "HavingWl", direction = Relationship.OUTGOING)
     private Set<HavingWl> havingWl;
-    @Relationship(type = "HavingPf", direction = Relationship.INCOMING)
+    @Relationship(type = "HavingPf", direction = Relationship.OUTGOING)
     private Set<HavingPf> havingPf;
 
     public User() {
@@ -139,6 +141,14 @@ public class User {
 
     public void setNric(String nric) {
         this.nric = nric;
+    }
+
+    public Date getFirstLogin() {
+        return firstLogin;
+    }
+
+    public void setFirstLogin(Date firstLogin) {
+        this.firstLogin = firstLogin;
     }
 
     public List<Long> getAlerts() {

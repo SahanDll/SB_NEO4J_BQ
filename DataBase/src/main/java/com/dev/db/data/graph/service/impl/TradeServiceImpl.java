@@ -18,9 +18,11 @@ import org.json.simple.JSONObject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
@@ -42,6 +44,9 @@ public class TradeServiceImpl implements TradeService {
     public Trade create(Trade trade) {
         Trade trd = tradeRepository.findTop1ByUserIdAndTradeTime(trade.getUserId(), trade.getTradeTime());
         User us = userRepository.findTop1ByUserId(trade.getUserId());
+        if(null == us){
+            trade.getUser().setFirstLogin(new Date());
+        }
         Stock stk = stockRepository.findTop1ByStkCode(trade.getStkCode());
 
         if(null == trd){
@@ -58,7 +63,7 @@ public class TradeServiceImpl implements TradeService {
             trade.getUser().setId(trd.getUser().getId());
             trd.setUser(trade.getUser());
             trade.getStock().setId(trd.getStock().getId());
-            trd.setScreen(trade.getScreen());
+            trd.setStock(trade.getStock());
             return tradeRepository.save(trd);
         }
     }
@@ -80,6 +85,29 @@ public class TradeServiceImpl implements TradeService {
 
     @Override
     public JSONObject readAll() {
-        return null;
+        JSONArray result = new JSONArray();
+        JSONObject main = new JSONObject();
+        try {
+            Gson gson = new Gson();
+            for (Trade trd : tradeRepository.findAll(new Sort(Sort.Direction.DESC, "TradeTime"))) {
+                JSONObject json = new JSONObject();
+                json.put("userId",trd.getUserId());
+                json.put("stockCode",trd.getUserId());
+                json.put("tradeTime",trd.getTradeTime());
+                json.put("orderType",trd.getOrderType());
+                json.put("quantity",trd.getQuantity());
+                json.put("price",trd.getPrice());
+                json.put("volume",trd.getVolume());
+                trd.setUser(null);
+                //result.add(json);
+                result.add(gson.toJson(trd));
+            }
+
+            main.put("Result", result);
+            main.put("RecordCount", result.size());
+        } catch (Exception e) {
+            logger.error("Error ", e);
+        }
+        return main;
     }
 }

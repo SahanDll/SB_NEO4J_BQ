@@ -36,7 +36,7 @@ public class BigQueryDataFetch {
         RequestSpecification request = RestAssured.given();
         request.header("Content-Type", "application/json");
         request.header("Authorization", Common.authenticate());
-/*        Response responseA1 = request.get("login/sync-android-data");
+        Response responseA1 = request.get("login/sync-android-data");
         TimeUnit.SECONDS.sleep(5);
         Response responseI1 = request.get("login/sync-ios-data");
         TimeUnit.SECONDS.sleep(5);
@@ -59,10 +59,14 @@ public class BigQueryDataFetch {
         Response responseA6 = request.get("trade/sync-android-data");
         TimeUnit.SECONDS.sleep(5);
         Response responseI6 = request.get("trade/sync-ios-data");
-        TimeUnit.SECONDS.sleep(5);*/
-        Response responseA6 = request.get("notification/clicked/sync-android-data");
         TimeUnit.SECONDS.sleep(5);
-        Response responseI6 = request.get("notification/clicked/sync-ios-data");
+        Response responseA7 = request.get("notification/clicked/sync-android-data");
+        TimeUnit.SECONDS.sleep(5);
+        Response responseI7 = request.get("notification/clicked/sync-ios-data");
+        TimeUnit.SECONDS.sleep(5);
+        Response responseA8 = request.get("notification/open/sync-android-data");
+        TimeUnit.SECONDS.sleep(5);
+        Response responseI8 = request.get("notification/open/sync-ios-data");
         TimeUnit.SECONDS.sleep(5);
         System.exit(0);
     }

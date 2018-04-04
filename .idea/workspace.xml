@@ -2,40 +2,70 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9096bfc3-9552-44dc-88b7-f895c1a48963" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DataBase/src/main/java/com/dev/db/data/graph/adapter/NotificationAdapter.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DataBase/src/main/java/com/dev/db/data/graph/model/NotificationClickUser.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/RestApi/src/main/java/com/dev/ra/controller/nodes/NotificationController.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RestApi/target/classes/com/dev/ra/controller/support/NotificationController$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RestApi/target/classes/com/dev/ra/controller/support/NotificationController$2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RestApi/target/classes/com/dev/ra/controller/support/NotificationController.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs/fmt-sentinel.log.2018-03-21.0.gz" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs/fmt-sentinel.log.2018-03-22.0.gz" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs/fmt-sentinel.log.2018-03-22.1.gz" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs/fmt-sentinel.log.2018-03-22.2.gz" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs/fmt-sentinel.log.2018-03-23.0.gz" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs/fmt-sentinel.log.2018-03-23.1.gz" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs/fmt-sentinel.log.2018-03-23.2.gz" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs/fmt-sentinel.log.2018-03-23.3.gz" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs/fmt-sentinel.log.2018-03-23.4.gz" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs/fmt-sentinel.log.2018-03-27.0.gz" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DataBase/src/main/java/com/dev/db/data/graph/bean/edge/Open.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DataBase/src/main/java/com/dev/db/data/graph/bean/node/Notification.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DataBase/src/main/java/com/dev/db/data/graph/repository/edge/OpenRepository.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DataBase/src/main/java/com/dev/db/data/graph/repository/node/NotificationRepository.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DataBase/src/main/java/com/dev/db/data/graph/service/impl/OpenServiceImpl.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DataBase/src/main/java/com/dev/db/data/graph/service/inte/OpenService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Authentication/target/classes/com/dev/au/config/SecurityConfig.class" afterPath="$PROJECT_DIR$/Authentication/target/classes/com/dev/au/config/SecurityConfig.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BigQuery/target/classes/com/dev/bq/fetch/BigQueryDataFetch.class" afterPath="$PROJECT_DIR$/BigQuery/target/classes/com/dev/bq/fetch/BigQueryDataFetch.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BigQuery/target/classes/com/dev/bq/request/AndroidQueryFactory.class" afterPath="$PROJECT_DIR$/BigQuery/target/classes/com/dev/bq/request/AndroidQueryFactory.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BigQuery/target/classes/com/dev/bq/request/IosQueryFactory.class" afterPath="$PROJECT_DIR$/BigQuery/target/classes/com/dev/bq/request/IosQueryFactory.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DataBase/target/classes/com/dev/db/data/graph/adapter/TradeAdapter.class" afterPath="$PROJECT_DIR$/DataBase/target/classes/com/dev/db/data/graph/adapter/TradeAdapter.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DataBase/target/classes/com/dev/db/data/graph/bean/edge/Trade.class" afterPath="$PROJECT_DIR$/DataBase/target/classes/com/dev/db/data/graph/bean/edge/Trade.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DataBase/target/classes/com/dev/db/data/graph/bean/node/AppInfo.class" afterPath="$PROJECT_DIR$/DataBase/target/classes/com/dev/db/data/graph/bean/node/AppInfo.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DataBase/target/classes/com/dev/db/data/graph/bean/node/DeviceInfo.class" afterPath="$PROJECT_DIR$/DataBase/target/classes/com/dev/db/data/graph/bean/node/DeviceInfo.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DataBase/target/classes/com/dev/db/data/graph/bean/node/GeoInfo.class" afterPath="$PROJECT_DIR$/DataBase/target/classes/com/dev/db/data/graph/bean/node/GeoInfo.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DataBase/target/classes/com/dev/db/data/graph/bean/node/Portfolio.class" afterPath="$PROJECT_DIR$/DataBase/target/classes/com/dev/db/data/graph/bean/node/Portfolio.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DataBase/target/classes/com/dev/db/data/graph/bean/node/ScreenTransition.class" afterPath="$PROJECT_DIR$/DataBase/target/classes/com/dev/db/data/graph/bean/node/ScreenTransition.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DataBase/target/classes/com/dev/db/data/graph/bean/node/Stock.class" afterPath="$PROJECT_DIR$/DataBase/target/classes/com/dev/db/data/graph/bean/node/Stock.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DataBase/target/classes/com/dev/db/data/graph/bean/node/User.class" afterPath="$PROJECT_DIR$/DataBase/target/classes/com/dev/db/data/graph/bean/node/User.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DataBase/target/classes/com/dev/db/data/graph/bean/node/Watchlist.class" afterPath="$PROJECT_DIR$/DataBase/target/classes/com/dev/db/data/graph/bean/node/Watchlist.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DataBase/target/classes/com/dev/db/data/graph/repository/edge/TradeRepository.class" afterPath="$PROJECT_DIR$/DataBase/target/classes/com/dev/db/data/graph/repository/edge/TradeRepository.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DataBase/target/classes/com/dev/db/data/graph/repository/node/UserRepository.class" afterPath="$PROJECT_DIR$/DataBase/target/classes/com/dev/db/data/graph/repository/node/UserRepository.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DataBase/target/classes/com/dev/db/data/graph/service/impl/DownloadedServiceImpl.class" afterPath="$PROJECT_DIR$/DataBase/target/classes/com/dev/db/data/graph/service/impl/DownloadedServiceImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DataBase/target/classes/com/dev/db/data/graph/service/impl/EngageServiceImpl.class" afterPath="$PROJECT_DIR$/DataBase/target/classes/com/dev/db/data/graph/service/impl/EngageServiceImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DataBase/target/classes/com/dev/db/data/graph/service/impl/LoginServiceImpl.class" afterPath="$PROJECT_DIR$/DataBase/target/classes/com/dev/db/data/graph/service/impl/LoginServiceImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DataBase/target/classes/com/dev/db/data/graph/service/impl/TradeServiceImpl.class" afterPath="$PROJECT_DIR$/DataBase/target/classes/com/dev/db/data/graph/service/impl/TradeServiceImpl.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DataBase/target/classes/com/dev/db/data/graph/service/impl/UserServiceImpl.class" afterPath="$PROJECT_DIR$/DataBase/target/classes/com/dev/db/data/graph/service/impl/UserServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DataBase/target/classes/com/dev/db/data/graph/service/inte/UserService.class" afterPath="$PROJECT_DIR$/DataBase/target/classes/com/dev/db/data/graph/service/inte/UserService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RestApi/target/classes/com/dev/ra/controller/nodes/TradeController.class" afterPath="$PROJECT_DIR$/RestApi/target/classes/com/dev/ra/controller/nodes/TradeController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DataBase/target/classes/com/dev/db/data/graph/service/impl/UsingServiceImpl.class" afterPath="$PROJECT_DIR$/DataBase/target/classes/com/dev/db/data/graph/service/impl/UsingServiceImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DataBase/target/classes/com/dev/db/data/graph/service/impl/ViewServiceImpl.class" afterPath="$PROJECT_DIR$/DataBase/target/classes/com/dev/db/data/graph/service/impl/ViewServiceImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Sentinel/target/classes/com/dev/sv/server/conf/GraphDataConfig.class" afterPath="$PROJECT_DIR$/Sentinel/target/classes/com/dev/sv/server/conf/GraphDataConfig.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Authentication/src/main/java/com/dev/au/config/SecurityConfig.java" afterPath="$PROJECT_DIR$/Authentication/src/main/java/com/dev/au/config/SecurityConfig.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BigQuery/src/main/java/com/dev/bq/fetch/BigQueryDataFetch.java" afterPath="$PROJECT_DIR$/BigQuery/src/main/java/com/dev/bq/fetch/BigQueryDataFetch.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BigQuery/src/main/java/com/dev/bq/request/AndroidQueryFactory.java" afterPath="$PROJECT_DIR$/BigQuery/src/main/java/com/dev/bq/request/AndroidQueryFactory.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BigQuery/src/main/java/com/dev/bq/request/IosQueryFactory.java" afterPath="$PROJECT_DIR$/BigQuery/src/main/java/com/dev/bq/request/IosQueryFactory.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BigQuery/src/main/java/com/dev/bq/util/IConstants.java" afterPath="$PROJECT_DIR$/BigQuery/src/main/java/com/dev/bq/util/IConstants.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DataBase/src/main/java/com/dev/db/data/graph/adapter/DownloadedAdapter.java" afterPath="$PROJECT_DIR$/DataBase/src/main/java/com/dev/db/data/graph/adapter/DownloadedAdapter.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DataBase/src/main/java/com/dev/db/data/graph/adapter/EngageAdapter.java" afterPath="$PROJECT_DIR$/DataBase/src/main/java/com/dev/db/data/graph/adapter/EngageAdapter.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DataBase/src/main/java/com/dev/db/data/graph/adapter/LoginAdapter.java" afterPath="$PROJECT_DIR$/DataBase/src/main/java/com/dev/db/data/graph/adapter/LoginAdapter.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DataBase/src/main/java/com/dev/db/data/graph/adapter/NotificationAdapter.java" afterPath="$PROJECT_DIR$/DataBase/src/main/java/com/dev/db/data/graph/adapter/NotificationAdapter.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DataBase/src/main/java/com/dev/db/data/graph/adapter/TradeAdapter.java" afterPath="$PROJECT_DIR$/DataBase/src/main/java/com/dev/db/data/graph/adapter/TradeAdapter.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DataBase/src/main/java/com/dev/db/data/graph/adapter/UsingAdapter.java" afterPath="$PROJECT_DIR$/DataBase/src/main/java/com/dev/db/data/graph/adapter/UsingAdapter.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DataBase/src/main/java/com/dev/db/data/graph/adapter/ViewAdapter.java" afterPath="$PROJECT_DIR$/DataBase/src/main/java/com/dev/db/data/graph/adapter/ViewAdapter.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DataBase/src/main/java/com/dev/db/data/graph/bean/edge/Trade.java" afterPath="$PROJECT_DIR$/DataBase/src/main/java/com/dev/db/data/graph/bean/edge/Trade.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DataBase/src/main/java/com/dev/db/data/graph/bean/node/AppInfo.java" afterPath="$PROJECT_DIR$/DataBase/src/main/java/com/dev/db/data/graph/bean/node/AppInfo.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DataBase/src/main/java/com/dev/db/data/graph/bean/node/DeviceInfo.java" afterPath="$PROJECT_DIR$/DataBase/src/main/java/com/dev/db/data/graph/bean/node/DeviceInfo.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DataBase/src/main/java/com/dev/db/data/graph/bean/node/GeoInfo.java" afterPath="$PROJECT_DIR$/DataBase/src/main/java/com/dev/db/data/graph/bean/node/GeoInfo.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DataBase/src/main/java/com/dev/db/data/graph/bean/node/Portfolio.java" afterPath="$PROJECT_DIR$/DataBase/src/main/java/com/dev/db/data/graph/bean/node/Portfolio.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DataBase/src/main/java/com/dev/db/data/graph/bean/node/ScreenTransition.java" afterPath="$PROJECT_DIR$/DataBase/src/main/java/com/dev/db/data/graph/bean/node/ScreenTransition.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DataBase/src/main/java/com/dev/db/data/graph/bean/node/Stock.java" afterPath="$PROJECT_DIR$/DataBase/src/main/java/com/dev/db/data/graph/bean/node/Stock.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DataBase/src/main/java/com/dev/db/data/graph/bean/node/User.java" afterPath="$PROJECT_DIR$/DataBase/src/main/java/com/dev/db/data/graph/bean/node/User.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DataBase/src/main/java/com/dev/db/data/graph/bean/node/Watchlist.java" afterPath="$PROJECT_DIR$/DataBase/src/main/java/com/dev/db/data/graph/bean/node/Watchlist.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DataBase/src/main/java/com/dev/db/data/graph/repository/edge/TradeRepository.java" afterPath="$PROJECT_DIR$/DataBase/src/main/java/com/dev/db/data/graph/repository/edge/TradeRepository.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DataBase/src/main/java/com/dev/db/data/graph/repository/node/UserRepository.java" afterPath="$PROJECT_DIR$/DataBase/src/main/java/com/dev/db/data/graph/repository/node/UserRepository.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DataBase/src/main/java/com/dev/db/data/graph/service/impl/DownloadedServiceImpl.java" afterPath="$PROJECT_DIR$/DataBase/src/main/java/com/dev/db/data/graph/service/impl/DownloadedServiceImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DataBase/src/main/java/com/dev/db/data/graph/service/impl/EngageServiceImpl.java" afterPath="$PROJECT_DIR$/DataBase/src/main/java/com/dev/db/data/graph/service/impl/EngageServiceImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DataBase/src/main/java/com/dev/db/data/graph/service/impl/LoginServiceImpl.java" afterPath="$PROJECT_DIR$/DataBase/src/main/java/com/dev/db/data/graph/service/impl/LoginServiceImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DataBase/src/main/java/com/dev/db/data/graph/service/impl/TradeServiceImpl.java" afterPath="$PROJECT_DIR$/DataBase/src/main/java/com/dev/db/data/graph/service/impl/TradeServiceImpl.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DataBase/src/main/java/com/dev/db/data/graph/service/impl/UserServiceImpl.java" afterPath="$PROJECT_DIR$/DataBase/src/main/java/com/dev/db/data/graph/service/impl/UserServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DataBase/src/main/java/com/dev/db/data/graph/service/inte/UserService.java" afterPath="$PROJECT_DIR$/DataBase/src/main/java/com/dev/db/data/graph/service/inte/UserService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DataBase/src/main/java/com/dev/db/data/graph/service/impl/UsingServiceImpl.java" afterPath="$PROJECT_DIR$/DataBase/src/main/java/com/dev/db/data/graph/service/impl/UsingServiceImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DataBase/src/main/java/com/dev/db/data/graph/service/impl/ViewServiceImpl.java" afterPath="$PROJECT_DIR$/DataBase/src/main/java/com/dev/db/data/graph/service/impl/ViewServiceImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DataBase/src/main/java/com/dev/db/util/Common.java" afterPath="$PROJECT_DIR$/DataBase/src/main/java/com/dev/db/util/Common.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RestApi/src/main/java/com/dev/ra/controller/nodes/NotificationController.java" afterPath="$PROJECT_DIR$/RestApi/src/main/java/com/dev/ra/controller/nodes/NotificationController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Sentinel/src/main/java/com/dev/sv/server/conf/GraphDataConfig.java" afterPath="$PROJECT_DIR$/Sentinel/src/main/java/com/dev/sv/server/conf/GraphDataConfig.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Sentinel/src/main/resources/application.properties" afterPath="$PROJECT_DIR$/Sentinel/src/main/resources/application.properties" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Sentinel/target/classes/application.properties" afterPath="$PROJECT_DIR$/Sentinel/target/classes/application.properties" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/logs/fmt-sentinel.log" afterPath="$PROJECT_DIR$/logs/fmt-sentinel.log" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/RestApi/src/main/java/com/dev/ra/controller/support/NotificationController.java" afterPath="$PROJECT_DIR$/RestApi/src/main/java/com/dev/ra/controller/support/AlertController.java" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/DataBase/target/" />
@@ -53,7 +83,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/Analitics$Application.coverage" NAME="Application Coverage Results" MODIFIED="1521797019506" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/Analitics$Application.coverage" NAME="Application Coverage Results" MODIFIED="1522661352262" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
@@ -68,34 +98,40 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="UserServiceImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/DataBase/src/main/java/com/dev/db/data/graph/service/impl/UserServiceImpl.java">
+      <file leaf-file-name="TradeServiceImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/DataBase/src/main/java/com/dev/db/data/graph/service/impl/TradeServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="304">
-              <caret line="316" column="17" lean-forward="true" selection-start-line="316" selection-start-column="17" selection-end-line="316" selection-end-column="17" />
-              <folding>
-                <element signature="e#975#976#0" expanded="true" />
-                <element signature="e#1002#1003#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BigQueryDataFetch.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/BigQuery/src/main/java/com/dev/bq/fetch/BigQueryDataFetch.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="414">
-              <caret line="63" column="34" lean-forward="true" selection-start-line="63" selection-start-column="34" selection-end-line="63" selection-end-column="34" />
+            <state relative-caret-position="323">
+              <caret line="65" column="43" lean-forward="true" selection-start-line="65" selection-start-column="43" selection-end-line="65" selection-end-column="43" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="application.properties" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Sentinel/src/main/resources/application.properties">
+      <file leaf-file-name="OpenServiceImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/DataBase/src/main/java/com/dev/db/data/graph/service/impl/OpenServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="395">
-              <caret line="48" column="22" lean-forward="false" selection-start-line="48" selection-start-column="22" selection-end-line="48" selection-end-column="22" />
+            <state relative-caret-position="17">
+              <caret line="23" column="13" lean-forward="true" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
+              <folding>
+                <element signature="e#2272#2273#0" expanded="true" />
+                <element signature="e#2299#2300#0" expanded="true" />
+                <element signature="e#2365#2366#0" expanded="true" />
+                <element signature="e#2392#2393#0" expanded="true" />
+                <element signature="e#2462#2463#0" expanded="true" />
+                <element signature="e#2489#2490#0" expanded="true" />
+                <element signature="e#2538#2539#0" expanded="true" />
+                <element signature="e#2565#2566#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Open.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/DataBase/src/main/java/com/dev/db/data/graph/bean/edge/Open.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="289">
+              <caret line="24" column="31" lean-forward="true" selection-start-line="24" selection-start-column="31" selection-end-line="24" selection-end-column="31" />
               <folding />
             </state>
           </provider>
@@ -104,78 +140,69 @@
       <file leaf-file-name="NotificationAdapter.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/DataBase/src/main/java/com/dev/db/data/graph/adapter/NotificationAdapter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="46" column="30" lean-forward="true" selection-start-line="46" selection-start-column="30" selection-end-line="46" selection-end-column="30" />
+            <state relative-caret-position="975">
+              <caret line="89" column="62" lean-forward="true" selection-start-line="89" selection-start-column="62" selection-end-line="89" selection-end-column="62" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="IConstants.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/BigQuery/src/main/java/com/dev/bq/util/IConstants.java">
+      <file leaf-file-name="LoginServiceImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/DataBase/src/main/java/com/dev/db/data/graph/service/impl/LoginServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="51" lean-forward="true" selection-start-line="6" selection-start-column="51" selection-end-line="6" selection-end-column="87" />
+            <state relative-caret-position="-306">
+              <caret line="27" column="13" lean-forward="false" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AndroidQueryFactory.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/BigQuery/src/main/java/com/dev/bq/request/AndroidQueryFactory.java">
+      <file leaf-file-name="EngageServiceImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/DataBase/src/main/java/com/dev/db/data/graph/service/impl/EngageServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="215" column="71" lean-forward="true" selection-start-line="215" selection-start-column="71" selection-end-line="215" selection-end-column="71" />
+            <state relative-caret-position="-306">
+              <caret line="27" column="13" lean-forward="false" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AlertController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/RestApi/src/main/java/com/dev/ra/controller/support/AlertController.java">
+      <file leaf-file-name="DownloadedServiceImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/DataBase/src/main/java/com/dev/db/data/graph/service/impl/DownloadedServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="327">
-              <caret line="49" column="36" lean-forward="true" selection-start-line="49" selection-start-column="36" selection-end-line="49" selection-end-column="36" />
+            <state relative-caret-position="-136">
+              <caret line="34" column="46" lean-forward="true" selection-start-line="34" selection-start-column="46" selection-end-line="34" selection-end-column="46" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="NotificationController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/RestApi/src/main/java/com/dev/ra/controller/nodes/NotificationController.java">
+      <file leaf-file-name="ViewServiceImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/DataBase/src/main/java/com/dev/db/data/graph/service/impl/ViewServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="62" column="63" lean-forward="true" selection-start-line="62" selection-start-column="63" selection-end-line="62" selection-end-column="63" />
+            <state relative-caret-position="848">
+              <caret line="100" column="5" lean-forward="true" selection-start-line="100" selection-start-column="5" selection-end-line="100" selection-end-column="5" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/DataBase/src/main/java/com/dev/db/data/graph/service/inte/UserService.java">
+      <file leaf-file-name="UsingServiceImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/DataBase/src/main/java/com/dev/db/data/graph/service/impl/UsingServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="22" column="16" lean-forward="false" selection-start-line="22" selection-start-column="16" selection-end-line="22" selection-end-column="16" />
+            <state relative-caret-position="-306">
+              <caret line="27" column="13" lean-forward="false" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="User.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/DataBase/src/main/java/com/dev/db/data/graph/bean/node/User.java">
+      <file leaf-file-name="UserServiceImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/DataBase/src/main/java/com/dev/db/data/graph/service/impl/UserServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="168">
-              <caret line="205" column="5" lean-forward="true" selection-start-line="205" selection-start-column="5" selection-end-line="205" selection-end-column="5" />
-              <folding>
-                <element signature="e#3653#3654#0" expanded="true" />
-                <element signature="e#3682#3683#0" expanded="true" />
-                <element signature="e#3806#3807#0" expanded="true" />
-                <element signature="e#3838#3839#0" expanded="true" />
-                <element signature="e#5277#5278#0" expanded="true" />
-                <element signature="e#5310#5311#0" expanded="true" />
-                <element signature="e#5366#5367#0" expanded="true" />
-                <element signature="e#5410#5411#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="1292">
+              <caret line="320" column="46" lean-forward="false" selection-start-line="320" selection-start-column="46" selection-end-line="320" selection-end-column="46" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -221,6 +248,8 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/DataBase/src/main/java/com/dev/db/data/graph/service/impl/UserServiceImpl.java" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/DataBase/src/main/java/com/dev/db/data/graph/adapter/TradeAdapter.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/RestApi/src/main/java/com/dev/ra/controller/nodes/NotificationController.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/DataBase/src/main/java/com/dev/db/data/graph/adapter/NotificationAdapter.java" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/DataBase/src/main/java/com/dev/db/data/graph/service/impl/EngageServiceImpl.java" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/DataSync/src/main/java/com/dev/ds/sync/service/UserDataService.java" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/DataExtract/src/main/java/com/dev/de/queue/Msmq.java" root0="SKIP_INSPECTION" />
@@ -228,57 +257,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/DataBase/src/main/java/com/dev/db/data/sql/fmt/repository/SmfAccountInfoPortfolioRepository.java" />
-        <option value="$PROJECT_DIR$/DataBase/src/main/java/com/dev/db/data/sql/fmt/repository/SmfAccountInfoWatchlistRepository.java" />
-        <option value="$PROJECT_DIR$/DataBase/src/main/java/com/dev/db/data/sql/fmt/repository/EcosAccountInfoPortfolioRepository.java" />
-        <option value="$PROJECT_DIR$/DataBase/src/main/java/com/dev/db/data/sql/fmt/repository/EcosAccountInfoWatchlistRepository.java" />
-        <option value="$PROJECT_DIR$/DataBase/src/main/java/com/dev/db/data/sql/fmt/repository/EcosAccountInfoMstRepository.java" />
-        <option value="$PROJECT_DIR$/DataBase/src/main/java/com/dev/db/data/sql/fmt/bean/ecos/EcosAccountInfoMst.java" />
-        <option value="$PROJECT_DIR$/DataBase/src/main/java/com/dev/db/query/filter/AccountInfoPortfolioFilter.java" />
-        <option value="$PROJECT_DIR$/DataBase/src/main/java/com/dev/db/query/build/PredicateQueryBuilder.java" />
+        <option value="$PROJECT_DIR$/DataBase/src/main/java/com/dev/db/data/graph/service/impl/UsingServiceImpl.java" />
+        <option value="$PROJECT_DIR$/DataBase/src/main/java/com/dev/db/data/graph/service/impl/LoginServiceImpl.java" />
+        <option value="$PROJECT_DIR$/DataBase/src/main/java/com/dev/db/data/graph/service/impl/EngageServiceImpl.java" />
+        <option value="$PROJECT_DIR$/DataBase/src/main/java/com/dev/db/data/graph/service/impl/DownloadedServiceImpl.java" />
         <option value="$PROJECT_DIR$/DataBase/src/main/java/com/dev/db/data/graph/repository/node/UserRepository.java" />
-        <option value="$PROJECT_DIR$/DataBase/src/main/java/com/dev/db/data/sql/fmt/bean/ecos/EcosAccountInfoPortfolio.java" />
-        <option value="$PROJECT_DIR$/DataBase/src/main/java/com/dev/db/data/sql/fmt/bean/smf/SmfAccountInfoPortfolio.java" />
-        <option value="$PROJECT_DIR$/DataBase/src/main/java/com/dev/db/data/sql/fmt/bean/smf/SmfAccountInfoWatchlist.java" />
-        <option value="$PROJECT_DIR$/DataBase/src/main/java/com/dev/db/data/sql/fmt/bean/ecos/EcosAccountInfoWatchlist.java" />
-        <option value="$PROJECT_DIR$/DataBase/src/main/java/com/dev/db/data/graph/bean/edge/HavingPf.java" />
-        <option value="$PROJECT_DIR$/DataBase/src/main/java/com/dev/db/data/graph/bean/edge/HavingWl.java" />
-        <option value="$PROJECT_DIR$/DataBase/src/main/java/com/dev/db/data/graph/bean/node/Watchlist.java" />
-        <option value="$PROJECT_DIR$/DataBase/src/main/java/com/dev/db/data/graph/bean/node/Portfolio.java" />
-        <option value="$PROJECT_DIR$/DataBase/src/main/java/com/dev/db/data/graph/repository/node/WatchlistRepository.java" />
-        <option value="$PROJECT_DIR$/DataBase/src/main/java/com/dev/db/data/graph/repository/node/PortfolioRepository.java" />
-        <option value="$PROJECT_DIR$/DataBase/src/main/java/com/dev/db/data/graph/repository/edge/HavingWlRepository.java" />
-        <option value="$PROJECT_DIR$/DataBase/src/main/java/com/dev/db/data/graph/repository/edge/HavingPfRepository.java" />
-        <option value="$PROJECT_DIR$/DataBase/src/main/java/com/dev/db/query/filter/AccountInfoWatchlistFilter.java" />
-        <option value="$PROJECT_DIR$/DataBase/src/main/java/com/dev/db/query/build/DynamicQueryGenerator.java" />
-        <option value="$PROJECT_DIR$/DataBase/src/main/java/com/dev/db/data/sql/fmt/repository/SettingMstRepository.java" />
-        <option value="$PROJECT_DIR$/DataBase/src/main/java/com/dev/db/data/graph/bean/node/Alert.java" />
-        <option value="$PROJECT_DIR$/DataBase/src/main/java/com/dev/db/data/sql/fmt/service/impl/AlertFiredLogServiceImpl.java" />
-        <option value="$PROJECT_DIR$/DataBase/src/main/java/com/dev/db/data/sql/fmt/repository/AlertFiredLogRepository.java" />
-        <option value="$PROJECT_DIR$/DataSync/src/main/java/com/dev/ds/sync/service/UserDataService.java" />
-        <option value="$PROJECT_DIR$/Sentinel/src/main/resources/application.yml" />
         <option value="$PROJECT_DIR$/Sentinel/src/main/java/com/dev/sv/server/conf/GraphDataConfig.java" />
-        <option value="$PROJECT_DIR$/DataSync/src/main/java/com/dev/ds/sync/fetch/UserDataFetch.java" />
+        <option value="$PROJECT_DIR$/DataBase/src/main/java/com/dev/db/data/graph/bean/node/Watchlist.java" />
         <option value="$PROJECT_DIR$/DataBase/src/main/java/com/dev/db/data/graph/bean/node/Stock.java" />
-        <option value="$PROJECT_DIR$/DataBase/src/main/java/com/dev/db/data/graph/service/inte/TradeService.java" />
-        <option value="$PROJECT_DIR$/DataBase/src/main/java/com/dev/db/data/graph/repository/edge/TradeRepository.java" />
-        <option value="$PROJECT_DIR$/DataBase/src/main/java/com/dev/db/data/graph/repository/node/StockRepository.java" />
-        <option value="$PROJECT_DIR$/DataBase/src/main/java/com/dev/db/data/graph/bean/edge/Trade.java" />
-        <option value="$PROJECT_DIR$/DataBase/src/main/java/com/dev/db/data/graph/adapter/TradeAdapter.java" />
-        <option value="$PROJECT_DIR$/DataBase/src/main/java/com/dev/db/data/graph/service/impl/TradeServiceImpl.java" />
-        <option value="$PROJECT_DIR$/RestApi/src/main/java/com/dev/ra/controller/nodes/TradeController.java" />
-        <option value="$PROJECT_DIR$/BigQuery/src/main/java/com/dev/bq/util/IConstants.java" />
-        <option value="$PROJECT_DIR$/BigQuery/src/main/java/com/dev/bq/request/AndroidQueryFactory.java" />
-        <option value="$PROJECT_DIR$/BigQuery/src/main/java/com/dev/bq/request/IosQueryFactory.java" />
-        <option value="$PROJECT_DIR$/DataBase/src/main/java/com/dev/db/data/graph/model/NotificationClickUser.java" />
-        <option value="$PROJECT_DIR$/DataBase/src/main/java/com/dev/db/data/graph/service/inte/UserService.java" />
-        <option value="$PROJECT_DIR$/BigQuery/src/main/java/com/dev/bq/fetch/BigQueryDataFetch.java" />
-        <option value="$PROJECT_DIR$/RestApi/src/main/java/com/dev/ra/controller/support/AlertController.java" />
-        <option value="$PROJECT_DIR$/DataBase/src/main/java/com/dev/db/data/graph/adapter/NotificationAdapter.java" />
+        <option value="$PROJECT_DIR$/DataBase/src/main/java/com/dev/db/data/graph/bean/node/ScreenTransition.java" />
+        <option value="$PROJECT_DIR$/DataBase/src/main/java/com/dev/db/data/graph/bean/node/ScreenEngagement.java" />
+        <option value="$PROJECT_DIR$/DataBase/src/main/java/com/dev/db/data/graph/bean/node/Portfolio.java" />
+        <option value="$PROJECT_DIR$/DataBase/src/main/java/com/dev/db/data/graph/bean/node/GeoInfo.java" />
+        <option value="$PROJECT_DIR$/DataBase/src/main/java/com/dev/db/data/graph/bean/node/DeviceInfo.java" />
+        <option value="$PROJECT_DIR$/DataBase/src/main/java/com/dev/db/data/graph/bean/node/AppInfo.java" />
+        <option value="$PROJECT_DIR$/DataBase/src/main/java/com/dev/db/data/graph/bean/edge/View.java" />
+        <option value="$PROJECT_DIR$/DataBase/src/main/java/com/dev/db/data/graph/bean/edge/Using.java" />
+        <option value="$PROJECT_DIR$/DataBase/src/main/java/com/dev/db/data/graph/bean/edge/Login.java" />
+        <option value="$PROJECT_DIR$/DataBase/src/main/java/com/dev/db/data/graph/bean/edge/HavingWl.java" />
+        <option value="$PROJECT_DIR$/DataBase/src/main/java/com/dev/db/data/graph/bean/edge/HavingPf.java" />
+        <option value="$PROJECT_DIR$/DataBase/src/main/java/com/dev/db/data/graph/bean/edge/Engage.java" />
+        <option value="$PROJECT_DIR$/DataBase/src/main/java/com/dev/db/data/graph/bean/edge/Downloaded.java" />
         <option value="$PROJECT_DIR$/DataBase/src/main/java/com/dev/db/data/graph/bean/node/User.java" />
-        <option value="$PROJECT_DIR$/RestApi/src/main/java/com/dev/ra/controller/nodes/NotificationController.java" />
-        <option value="$PROJECT_DIR$/DataBase/src/main/java/com/dev/db/data/graph/service/impl/UserServiceImpl.java" />
+        <option value="$PROJECT_DIR$/Authentication/src/main/java/com/dev/au/config/SecurityConfig.java" />
+        <option value="$PROJECT_DIR$/DataBase/src/main/java/com/dev/db/data/graph/bean/edge/Trade.java" />
+        <option value="$PROJECT_DIR$/BigQuery/src/main/java/com/dev/bq/util/IConstants.java" />
         <option value="$PROJECT_DIR$/Sentinel/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/DataBase/src/main/java/com/dev/db/data/graph/repository/edge/TradeRepository.java" />
+        <option value="$PROJECT_DIR$/RestApi/src/main/java/com/dev/ra/util/T.java" />
+        <option value="$PROJECT_DIR$/DataBase/src/main/java/com/dev/db/util/Common.java" />
+        <option value="$PROJECT_DIR$/DataBase/src/main/java/com/dev/db/data/graph/adapter/DownloadedAdapter.java" />
+        <option value="$PROJECT_DIR$/DataBase/src/main/java/com/dev/db/data/graph/adapter/EngageAdapter.java" />
+        <option value="$PROJECT_DIR$/DataBase/src/main/java/com/dev/db/data/graph/adapter/LoginAdapter.java" />
+        <option value="$PROJECT_DIR$/DataBase/src/main/java/com/dev/db/data/graph/adapter/UsingAdapter.java" />
+        <option value="$PROJECT_DIR$/DataBase/src/main/java/com/dev/db/data/graph/adapter/ViewAdapter.java" />
+        <option value="$PROJECT_DIR$/DataBase/src/main/java/com/dev/db/data/graph/service/impl/UserServiceImpl.java" />
+        <option value="$PROJECT_DIR$/DataBase/src/main/java/com/dev/db/data/graph/bean/node/Notification.java" />
+        <option value="$PROJECT_DIR$/DataBase/src/main/java/com/dev/db/data/graph/bean/edge/Open.java" />
+        <option value="$PROJECT_DIR$/DataBase/src/main/java/com/dev/db/data/graph/service/inte/NotificationService.java" />
+        <option value="$PROJECT_DIR$/DataBase/src/main/java/com/dev/db/data/graph/service/impl/NotificationServiceImpl.java" />
+        <option value="$PROJECT_DIR$/DataBase/src/main/java/com/dev/db/data/graph/repository/edge/NotificationRepository.java" />
+        <option value="$PROJECT_DIR$/DataBase/src/main/java/com/dev/db/data/graph/repository/node/NotificationRepository.java" />
+        <option value="$PROJECT_DIR$/DataBase/src/main/java/com/dev/db/data/graph/service/inte/OpenService.java" />
+        <option value="$PROJECT_DIR$/BigQuery/src/main/java/com/dev/bq/request/IosQueryFactory.java" />
+        <option value="$PROJECT_DIR$/BigQuery/src/main/java/com/dev/bq/request/AndroidQueryFactory.java" />
+        <option value="$PROJECT_DIR$/RestApi/src/main/java/com/dev/ra/controller/nodes/NotificationController.java" />
+        <option value="$PROJECT_DIR$/BigQuery/src/main/java/com/dev/bq/fetch/BigQueryDataFetch.java" />
+        <option value="$PROJECT_DIR$/DataBase/src/main/java/com/dev/db/data/graph/adapter/TradeAdapter.java" />
+        <option value="$PROJECT_DIR$/DataBase/src/main/java/com/dev/db/data/graph/adapter/NotificationAdapter.java" />
+        <option value="$PROJECT_DIR$/DataBase/src/main/java/com/dev/db/data/graph/repository/edge/OpenRepository.java" />
+        <option value="$PROJECT_DIR$/DataBase/src/main/java/com/dev/db/data/graph/service/impl/TradeServiceImpl.java" />
+        <option value="$PROJECT_DIR$/DataBase/src/main/java/com/dev/db/data/graph/service/impl/OpenServiceImpl.java" />
       </list>
     </option>
   </component>
@@ -364,6 +393,45 @@
           <expand>
             <path>
               <item name="Analitics" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Authentication" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Analitics" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Authentication" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Analitics" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Authentication" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Analitics" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Authentication" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Analitics" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Authentication" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="au" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Analitics" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Authentication" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="au" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Analitics" type="b2602c69:ProjectViewProjectNode" />
               <item name="BigQuery" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -409,6 +477,15 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="bq" type="462c0819:PsiDirectoryNode" />
               <item name="request" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Analitics" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BigQuery" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="bq" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Analitics" type="b2602c69:ProjectViewProjectNode" />
@@ -500,6 +577,18 @@
               <item name="data" type="462c0819:PsiDirectoryNode" />
               <item name="graph" type="462c0819:PsiDirectoryNode" />
               <item name="bean" type="462c0819:PsiDirectoryNode" />
+              <item name="edge" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Analitics" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DataBase" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="db" type="462c0819:PsiDirectoryNode" />
+              <item name="data" type="462c0819:PsiDirectoryNode" />
+              <item name="graph" type="462c0819:PsiDirectoryNode" />
+              <item name="bean" type="462c0819:PsiDirectoryNode" />
               <item name="node" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -510,7 +599,8 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="db" type="462c0819:PsiDirectoryNode" />
               <item name="data" type="462c0819:PsiDirectoryNode" />
-              <item name="sql" type="462c0819:PsiDirectoryNode" />
+              <item name="graph" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Analitics" type="b2602c69:ProjectViewProjectNode" />
@@ -520,70 +610,7 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="db" type="462c0819:PsiDirectoryNode" />
               <item name="data" type="462c0819:PsiDirectoryNode" />
-              <item name="sql" type="462c0819:PsiDirectoryNode" />
-              <item name="fmt" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Analitics" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DataBase" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="db" type="462c0819:PsiDirectoryNode" />
-              <item name="data" type="462c0819:PsiDirectoryNode" />
-              <item name="sql" type="462c0819:PsiDirectoryNode" />
-              <item name="fmt" type="462c0819:PsiDirectoryNode" />
-              <item name="bean" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Analitics" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DataBase" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="db" type="462c0819:PsiDirectoryNode" />
-              <item name="data" type="462c0819:PsiDirectoryNode" />
-              <item name="sql" type="462c0819:PsiDirectoryNode" />
-              <item name="fmt" type="462c0819:PsiDirectoryNode" />
-              <item name="bean" type="462c0819:PsiDirectoryNode" />
-              <item name="alert" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Analitics" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DataBase" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="db" type="462c0819:PsiDirectoryNode" />
-              <item name="data" type="462c0819:PsiDirectoryNode" />
-              <item name="sql" type="462c0819:PsiDirectoryNode" />
-              <item name="fmt" type="462c0819:PsiDirectoryNode" />
-              <item name="bean" type="462c0819:PsiDirectoryNode" />
-              <item name="ecos" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Analitics" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DataBase" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="db" type="462c0819:PsiDirectoryNode" />
-              <item name="data" type="462c0819:PsiDirectoryNode" />
-              <item name="sql" type="462c0819:PsiDirectoryNode" />
-              <item name="fmt" type="462c0819:PsiDirectoryNode" />
-              <item name="bean" type="462c0819:PsiDirectoryNode" />
-              <item name="smf" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Analitics" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DataBase" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="db" type="462c0819:PsiDirectoryNode" />
-              <item name="data" type="462c0819:PsiDirectoryNode" />
-              <item name="sql" type="462c0819:PsiDirectoryNode" />
-              <item name="fmt" type="462c0819:PsiDirectoryNode" />
+              <item name="graph" type="462c0819:PsiDirectoryNode" />
               <item name="repository" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -594,8 +621,31 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="db" type="462c0819:PsiDirectoryNode" />
               <item name="data" type="462c0819:PsiDirectoryNode" />
-              <item name="sql" type="462c0819:PsiDirectoryNode" />
-              <item name="fmt" type="462c0819:PsiDirectoryNode" />
+              <item name="graph" type="462c0819:PsiDirectoryNode" />
+              <item name="repository" type="462c0819:PsiDirectoryNode" />
+              <item name="edge" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Analitics" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DataBase" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="db" type="462c0819:PsiDirectoryNode" />
+              <item name="data" type="462c0819:PsiDirectoryNode" />
+              <item name="graph" type="462c0819:PsiDirectoryNode" />
+              <item name="repository" type="462c0819:PsiDirectoryNode" />
+              <item name="node" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Analitics" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DataBase" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="db" type="462c0819:PsiDirectoryNode" />
+              <item name="data" type="462c0819:PsiDirectoryNode" />
+              <item name="graph" type="462c0819:PsiDirectoryNode" />
               <item name="service" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -606,8 +656,7 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="db" type="462c0819:PsiDirectoryNode" />
               <item name="data" type="462c0819:PsiDirectoryNode" />
-              <item name="sql" type="462c0819:PsiDirectoryNode" />
-              <item name="fmt" type="462c0819:PsiDirectoryNode" />
+              <item name="graph" type="462c0819:PsiDirectoryNode" />
               <item name="service" type="462c0819:PsiDirectoryNode" />
               <item name="impl" type="462c0819:PsiDirectoryNode" />
             </path>
@@ -619,8 +668,7 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="db" type="462c0819:PsiDirectoryNode" />
               <item name="data" type="462c0819:PsiDirectoryNode" />
-              <item name="sql" type="462c0819:PsiDirectoryNode" />
-              <item name="fmt" type="462c0819:PsiDirectoryNode" />
+              <item name="graph" type="462c0819:PsiDirectoryNode" />
               <item name="service" type="462c0819:PsiDirectoryNode" />
               <item name="inte" type="462c0819:PsiDirectoryNode" />
             </path>
@@ -773,6 +821,15 @@
             </path>
             <path>
               <item name="Analitics" type="b2602c69:ProjectViewProjectNode" />
+              <item name="RestApi" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="ra" type="462c0819:PsiDirectoryNode" />
+              <item name="util" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Analitics" type="b2602c69:ProjectViewProjectNode" />
               <item name="Sentinel" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -883,11 +940,11 @@
       <recent name="com.dev.db.data" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.dev.db.data.graph.adapter" />
-      <recent name="com.dev.ra.controller.nodes" />
+      <recent name="com.dev.db.data.graph.repository.edge" />
       <recent name="com.dev.db.data.graph.service.impl" />
       <recent name="com.dev.db.data.graph.service.inte" />
-      <recent name="com.dev.db.data.graph.repository.node" />
+      <recent name="com.dev.db.data.graph.bean.edge" />
+      <recent name="com.dev.db.data.graph.bean.node" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\WorkSpace\FB Analatics\DataBase\src\main\java\com\dev\db\data\sql\fmt\bean\ecos" />
@@ -1338,7 +1395,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.Application">
+  <component name="RunManager" selected="Application.T (1)">
     <configuration name="Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.dev.sv.server.Application" />
@@ -1373,6 +1430,25 @@
           </MavenRunnerParameters>
         </option>
       </MavenSettings>
+    </configuration>
+    <configuration name="T (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.dev.ra.util.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="com.dev.ra.util.T" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="RestApi" />
+      <envs />
     </configuration>
     <configuration name="T" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
@@ -1493,16 +1569,18 @@
       <properties />
       <listeners />
     </configuration>
-    <list size="4">
+    <list size="5">
       <item index="0" class="java.lang.String" itemvalue="Maven.Maven" />
       <item index="1" class="java.lang.String" itemvalue="Spring Boot.Application" />
       <item index="2" class="java.lang.String" itemvalue="Application.T" />
       <item index="3" class="java.lang.String" itemvalue="Application.TestNifi" />
+      <item index="4" class="java.lang.String" itemvalue="Application.T (1)" />
     </list>
     <recent_temporary>
-      <list size="2">
-        <item index="0" class="java.lang.String" itemvalue="Application.TestNifi" />
-        <item index="1" class="java.lang.String" itemvalue="Application.T" />
+      <list size="3">
+        <item index="0" class="java.lang.String" itemvalue="Application.T (1)" />
+        <item index="1" class="java.lang.String" itemvalue="Application.TestNifi" />
+        <item index="2" class="java.lang.String" itemvalue="Application.T" />
       </list>
     </recent_temporary>
   </component>
@@ -1528,12 +1606,12 @@
       <workItem from="1520392454663" duration="34108000" />
       <workItem from="1521014936141" duration="57647000" />
       <workItem from="1521695247450" duration="24278000" />
-      <workItem from="1521782204459" duration="49658000" />
+      <workItem from="1521782204459" duration="81084000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="258616000" />
+    <option name="totallyTimeSpent" value="290042000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1550,7 +1628,7 @@
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.324295" sideWeight="0.50215286" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.10501066" sideWeight="0.49224806" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.10501066" sideWeight="0.49361023" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1565,8 +1643,8 @@
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32942432" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3891258" sideWeight="0.49784714" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.10501066" sideWeight="0.50775194" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3326226" sideWeight="0.49784714" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.10501066" sideWeight="0.5063898" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32942432" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32929516" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27132195" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -1617,217 +1695,225 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="14" />
+      <option name="time" value="22" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/DataBase/src/main/java/com/dev/db/data/graph/bean/node/GeoInfo.java">
+    <entry file="file://$PROJECT_DIR$/DataBase/src/main/java/com/dev/db/data/graph/bean/node/ScreenTransition.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="12" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DataBase/src/main/java/com/dev/db/data/graph/service/impl/DownloadedServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="43" column="55" lean-forward="false" selection-start-line="43" selection-start-column="55" selection-end-line="43" selection-end-column="55" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DataBase/src/main/java/com/dev/db/data/graph/bean/edge/HavingPf.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="309">
-          <caret line="37" column="11" lean-forward="false" selection-start-line="37" selection-start-column="11" selection-end-line="37" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DataBase/src/main/java/com/dev/db/query/filter/AccountInfoPortfolioFilter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DataBase/src/main/java/com/dev/db/query/build/DynamicQueryGenerator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="366">
-          <caret line="66" column="67" lean-forward="false" selection-start-line="66" selection-start-column="67" selection-end-line="66" selection-end-column="67" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Sentinel/src/main/webapp/WEB-INF/jetty-web.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="12" lean-forward="false" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DataBase/src/main/java/com/dev/db/query/filter/AccountInfoWatchlistFilter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="27" lean-forward="false" selection-start-line="11" selection-start-column="27" selection-end-line="11" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DataBase/src/main/java/com/dev/db/data/graph/repository/node/UserRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DataBase/src/main/java/com/dev/db/data/sql/fmt/bean/alert/SettingMst.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1335">
-          <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DataBase/src/main/java/com/dev/db/data/graph/bean/node/Alert.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="21" column="23" lean-forward="false" selection-start-line="21" selection-start-column="23" selection-end-line="21" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DataBase/src/main/java/com/dev/db/data/sql/fmt/repository/SettingMstRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="15" column="37" lean-forward="false" selection-start-line="15" selection-start-column="37" selection-end-line="15" selection-end-column="37" />
+        <state relative-caret-position="136">
+          <caret line="12" column="7" lean-forward="false" selection-start-line="12" selection-start-column="7" selection-end-line="12" selection-end-column="7" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/DataBase/src/main/java/com/dev/db/data/graph/bean/node/Portfolio.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="316">
-          <caret line="30" column="0" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="35" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1804#1805#0" expanded="true" />
-            <element signature="e#1836#1837#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="136">
+          <caret line="14" column="7" lean-forward="false" selection-start-line="14" selection-start-column="7" selection-end-line="14" selection-end-column="7" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DataBase/src/main/java/com/dev/db/data/sql/fmt/service/inte/SettingMstService.java">
+    <entry file="file://$PROJECT_DIR$/DataBase/src/main/java/com/dev/db/data/graph/bean/node/GeoInfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="12" column="7" lean-forward="false" selection-start-line="12" selection-start-column="7" selection-end-line="12" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DataBase/src/main/java/com/dev/db/data/graph/bean/node/DeviceInfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="12" column="7" lean-forward="false" selection-start-line="12" selection-start-column="7" selection-end-line="12" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DataBase/src/main/java/com/dev/db/data/graph/bean/node/ScreenEngagement.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="12" column="7" lean-forward="false" selection-start-line="12" selection-start-column="7" selection-end-line="12" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DataBase/src/main/java/com/dev/db/data/graph/bean/edge/Using.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="13" column="7" lean-forward="false" selection-start-line="13" selection-start-column="7" selection-end-line="13" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DataBase/src/main/java/com/dev/db/data/graph/bean/edge/HavingWl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
-          <caret line="7" column="17" lean-forward="false" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+          <caret line="14" column="7" lean-forward="false" selection-start-line="14" selection-start-column="7" selection-end-line="14" selection-end-column="7" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DataBase/src/main/java/com/dev/db/data/sql/fmt/service/inte/AlertFiredLogService.java">
+    <entry file="file://$PROJECT_DIR$/DataBase/src/main/java/com/dev/db/data/graph/bean/edge/HavingPf.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
-          <caret line="8" column="17" lean-forward="false" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+          <caret line="16" column="7" lean-forward="false" selection-start-line="16" selection-start-column="7" selection-end-line="16" selection-end-column="7" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DataBase/src/main/java/com/dev/db/data/sql/fmt/service/impl/AlertFiredLogServiceImpl.java">
+    <entry file="file://$PROJECT_DIR$/DataBase/src/main/java/com/dev/db/data/graph/bean/edge/Engage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="367">
-          <caret line="39" column="60" lean-forward="true" selection-start-line="39" selection-start-column="60" selection-end-line="39" selection-end-column="60" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DataBase/src/main/java/com/dev/db/data/sql/fmt/bean/alert/AlertFireLog.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="15" column="13" lean-forward="false" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+        <state relative-caret-position="119">
+          <caret line="13" column="7" lean-forward="false" selection-start-line="13" selection-start-column="7" selection-end-line="13" selection-end-column="7" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DataBase/src/main/java/com/dev/db/data/sql/fmt/repository/AlertFiredLogRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="40" lean-forward="false" selection-start-line="22" selection-start-column="23" selection-end-line="22" selection-end-column="40" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/DataBase/src/main/java/com/dev/db/data/graph/bean/edge/Downloaded.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="7" lean-forward="true" selection-start-line="4" selection-start-column="7" selection-end-line="4" selection-end-column="20" />
-          <folding>
-            <element signature="e#1114#1115#0" expanded="false" />
-            <element signature="e#1141#1142#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Sentinel/src/main/resources/application.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="28" column="24" lean-forward="false" selection-start-line="28" selection-start-column="24" selection-end-line="28" selection-end-column="24" />
+        <state relative-caret-position="119">
+          <caret line="13" column="7" lean-forward="false" selection-start-line="13" selection-start-column="7" selection-end-line="13" selection-end-column="7" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DataSync/src/main/java/com/dev/ds/sync/service/UserDataService.java">
+    <entry file="file://$PROJECT_DIR$/RestApi/src/main/java/com/dev/ra/controller/nodes/UserController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="251">
-          <caret line="333" column="40" lean-forward="true" selection-start-line="333" selection-start-column="40" selection-end-line="333" selection-end-column="40" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Sentinel/src/main/java/com/dev/sv/server/conf/GraphDataConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="40" column="44" lean-forward="true" selection-start-line="40" selection-start-column="44" selection-end-line="40" selection-end-column="44" />
+        <state relative-caret-position="406">
+          <caret line="59" column="38" lean-forward="false" selection-start-line="59" selection-start-column="38" selection-end-line="59" selection-end-column="38" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/RestApi/src/main/java/com/dev/ra/controller/nodes/DownloadedController.java">
+    <entry file="file://$PROJECT_DIR$/DataBase/src/main/java/com/dev/db/data/graph/service/inte/UserService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="20" column="22" lean-forward="false" selection-start-line="20" selection-start-column="22" selection-end-line="20" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DataBase/src/main/java/com/dev/db/data/graph/bean/node/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="51" column="67" lean-forward="true" selection-start-line="51" selection-start-column="67" selection-end-line="51" selection-end-column="67" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Authentication/src/main/java/com/dev/au/config/SecurityConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="90" column="473" lean-forward="false" selection-start-line="90" selection-start-column="473" selection-end-line="90" selection-end-column="473" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DataBase/src/main/java/com/dev/db/data/graph/bean/edge/Trade.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
-          <caret line="23" column="13" lean-forward="false" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
+          <caret line="83" column="32" lean-forward="false" selection-start-line="83" selection-start-column="32" selection-end-line="83" selection-end-column="32" />
+          <folding>
+            <element signature="e#1931#1932#0" expanded="true" />
+            <element signature="e#1979#1980#0" expanded="true" />
+            <element signature="e#2021#2022#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BigQuery/src/main/java/com/dev/bq/util/IConstants.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="95" lean-forward="true" selection-start-line="6" selection-start-column="95" selection-end-line="6" selection-end-column="95" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DataSync/src/main/java/com/dev/ds/sync/fetch/UserDataFetch.java">
+    <entry file="file://$PROJECT_DIR$/Sentinel/src/main/resources/application.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="16" column="38" lean-forward="true" selection-start-line="16" selection-start-column="38" selection-end-line="16" selection-end-column="38" />
+        <state relative-caret-position="335">
+          <caret line="48" column="22" lean-forward="false" selection-start-line="48" selection-start-column="22" selection-end-line="48" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RestApi/src/main/java/com/dev/ra/util/T.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="56" lean-forward="false" selection-start-line="6" selection-start-column="56" selection-end-line="6" selection-end-column="56" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DataBase/src/main/java/com/dev/db/util/Common.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="278">
+          <caret line="44" column="37" lean-forward="false" selection-start-line="44" selection-start-column="23" selection-end-line="44" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DataBase/src/main/java/com/dev/db/data/graph/adapter/DownloadedAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="354">
+          <caret line="52" column="29" lean-forward="true" selection-start-line="52" selection-start-column="29" selection-end-line="52" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DataBase/src/main/java/com/dev/db/data/graph/adapter/EngageAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="58" column="64" lean-forward="false" selection-start-line="58" selection-start-column="64" selection-end-line="58" selection-end-column="64" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DataBase/src/main/java/com/dev/db/data/graph/bean/edge/Login.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="767">
+          <caret line="92" column="22" lean-forward="false" selection-start-line="92" selection-start-column="22" selection-end-line="92" selection-end-column="22" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <marker date="1522126104303" expanded="false" signature="827:843" ph="&lt;~&gt;" />
-            <marker date="1522126104303" expanded="false" signature="895:911" ph="&lt;~&gt;" />
-            <marker date="1522126104303" expanded="false" signature="1120:1128" ph="&lt;~&gt;" />
+            <element signature="e#2002#2003#0" expanded="false" />
+            <element signature="e#2034#2035#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DataBase/src/main/java/com/dev/db/data/graph/model/NotificationClickUser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="17" lean-forward="false" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DataBase/src/main/java/com/dev/db/data/graph/adapter/UsingAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="58" column="54" lean-forward="true" selection-start-line="58" selection-start-column="54" selection-end-line="58" selection-end-column="54" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/DataBase/src/main/java/com/dev/db/data/graph/bean/edge/View.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-17">
-          <caret line="13" column="13" lean-forward="false" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+        <state relative-caret-position="179">
+          <caret line="95" column="21" lean-forward="false" selection-start-line="95" selection-start-column="21" selection-end-line="95" selection-end-column="21" />
+          <folding>
+            <element signature="e#2167#2168#0" expanded="false" />
+            <element signature="e#2198#2199#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DataBase/src/main/java/com/dev/db/data/graph/adapter/ViewAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="54" column="36" lean-forward="false" selection-start-line="54" selection-start-column="36" selection-end-line="54" selection-end-column="36" />
           <folding />
         </state>
       </provider>
@@ -1835,240 +1921,219 @@
     <entry file="file://$PROJECT_DIR$/DataBase/src/main/java/com/dev/db/data/graph/bean/node/AppInfo.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
-          <caret line="13" column="13" lean-forward="false" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DataBase/src/main/java/com/dev/db/data/graph/adapter/ViewAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="201">
-          <caret line="30" column="26" lean-forward="false" selection-start-line="30" selection-start-column="26" selection-end-line="30" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/RestApi/src/main/java/com/dev/ra/controller/nodes/ViewController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="193">
-          <caret line="39" column="55" lean-forward="false" selection-start-line="39" selection-start-column="55" selection-end-line="39" selection-end-column="55" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DataBase/src/main/java/com/dev/db/data/graph/service/inte/TradeService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="12" column="17" lean-forward="false" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DataBase/src/main/java/com/dev/db/data/graph/repository/node/StockRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="15" column="27" lean-forward="false" selection-start-line="15" selection-start-column="10" selection-end-line="15" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DataBase/src/main/java/com/dev/db/data/graph/service/impl/ViewServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="37" column="17" lean-forward="false" selection-start-line="37" selection-start-column="17" selection-end-line="37" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DataBase/src/main/java/com/dev/db/data/graph/bean/node/Stock.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="29" column="0" lean-forward="true" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Sentinel/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-476">
-          <caret line="11" column="44" lean-forward="false" selection-start-line="11" selection-start-column="44" selection-end-line="11" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DataBase/src/main/java/com/dev/db/data/graph/repository/edge/TradeRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DataBase/src/main/java/com/dev/db/data/graph/service/impl/TradeServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="57" column="57" lean-forward="false" selection-start-line="57" selection-start-column="57" selection-end-line="57" selection-end-column="57" />
-          <folding>
-            <element signature="e#2460#2461#0" expanded="false" />
-            <element signature="e#2487#2488#0" expanded="false" />
-            <element signature="e#2555#2556#0" expanded="false" />
-            <element signature="e#2582#2583#0" expanded="false" />
-            <element signature="e#2653#2654#0" expanded="false" />
-            <element signature="e#2680#2681#0" expanded="false" />
-            <element signature="e#2729#2730#0" expanded="false" />
-            <element signature="e#2756#2757#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BigQuery/src/main/java/com/dev/bq/util/Common.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1054">
-          <caret line="23" column="13" lean-forward="false" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
+          <caret line="12" column="7" lean-forward="false" selection-start-line="12" selection-start-column="7" selection-end-line="12" selection-end-column="7" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/RestApi/src/main/java/com/dev/ra/controller/nodes/TradeController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="741">
-          <caret line="70" column="0" lean-forward="false" selection-start-line="70" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
+        <state relative-caret-position="374">
+          <caret line="42" column="61" lean-forward="false" selection-start-line="42" selection-start-column="61" selection-end-line="42" selection-end-column="61" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/BigQuery/src/main/java/com/dev/bq/request/IosQueryFactory.java">
+    <entry file="file://$PROJECT_DIR$/DataBase/src/main/java/com/dev/db/data/graph/bean/node/Notification.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="191">
-          <caret line="226" column="60" lean-forward="true" selection-start-line="226" selection-start-column="60" selection-end-line="226" selection-end-column="60" />
+        <state relative-caret-position="102">
+          <caret line="14" column="13" lean-forward="false" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
           <folding>
-            <element signature="imports" expanded="false" />
+            <element signature="e#728#729#0" expanded="true" />
+            <element signature="e#753#754#0" expanded="true" />
+            <element signature="e#787#788#0" expanded="true" />
+            <element signature="e#815#816#0" expanded="true" />
+            <element signature="e#846#847#0" expanded="true" />
+            <element signature="e#873#874#0" expanded="true" />
+            <element signature="e#913#914#0" expanded="true" />
+            <element signature="e#945#946#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DataBase/src/main/java/com/dev/db/data/graph/repository/node/NotificationRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="23" column="1" lean-forward="true" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DataBase/src/main/java/com/dev/db/data/graph/service/inte/OpenService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="19" column="53" lean-forward="true" selection-start-line="19" selection-start-column="53" selection-end-line="19" selection-end-column="53" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/BigQuery/src/main/java/com/dev/bq/request/BigQueryRequest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="139">
-          <caret line="39" column="35" lean-forward="false" selection-start-line="39" selection-start-column="35" selection-end-line="39" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DataBase/src/main/java/com/dev/db/data/graph/adapter/TradeAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="39" column="23" lean-forward="true" selection-start-line="39" selection-start-column="23" selection-end-line="39" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DataBase/src/main/java/com/dev/db/data/graph/bean/edge/Trade.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="14" column="13" lean-forward="false" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DataBase/src/main/java/com/dev/db/data/graph/model/NotificationClickUser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="34" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/RestApi/src/main/java/com/dev/ra/controller/support/AlertController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="327">
-          <caret line="49" column="36" lean-forward="true" selection-start-line="49" selection-start-column="36" selection-end-line="49" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BigQuery/src/main/java/com/dev/bq/fetch/BigQueryDataFetch.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="63" column="34" lean-forward="true" selection-start-line="63" selection-start-column="34" selection-end-line="63" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DataBase/src/main/java/com/dev/db/data/graph/adapter/NotificationAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="46" column="30" lean-forward="true" selection-start-line="46" selection-start-column="30" selection-end-line="46" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BigQuery/src/main/java/com/dev/bq/util/IConstants.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="51" lean-forward="true" selection-start-line="6" selection-start-column="51" selection-end-line="6" selection-end-column="87" />
+        <state relative-caret-position="213">
+          <caret line="63" column="62" lean-forward="false" selection-start-line="63" selection-start-column="62" selection-end-line="63" selection-end-column="62" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/BigQuery/src/main/java/com/dev/bq/request/AndroidQueryFactory.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="215" column="71" lean-forward="true" selection-start-line="215" selection-start-column="71" selection-end-line="215" selection-end-column="71" />
+        <state relative-caret-position="380">
+          <caret line="259" column="72" lean-forward="false" selection-start-line="259" selection-start-column="72" selection-end-line="259" selection-end-column="72" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DataBase/src/main/java/com/dev/db/data/graph/bean/node/User.java">
+    <entry file="file://$PROJECT_DIR$/BigQuery/src/main/java/com/dev/bq/fetch/BigQueryDataFetch.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="205" column="5" lean-forward="true" selection-start-line="205" selection-start-column="5" selection-end-line="205" selection-end-column="5" />
-          <folding>
-            <element signature="e#3653#3654#0" expanded="true" />
-            <element signature="e#3682#3683#0" expanded="true" />
-            <element signature="e#3806#3807#0" expanded="true" />
-            <element signature="e#3838#3839#0" expanded="true" />
-            <element signature="e#5277#5278#0" expanded="true" />
-            <element signature="e#5310#5311#0" expanded="true" />
-            <element signature="e#5366#5367#0" expanded="true" />
-            <element signature="e#5410#5411#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="131">
+          <caret line="66" column="81" lean-forward="true" selection-start-line="66" selection-start-column="81" selection-end-line="66" selection-end-column="81" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/RestApi/src/main/java/com/dev/ra/controller/nodes/NotificationController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="62" column="63" lean-forward="true" selection-start-line="62" selection-start-column="63" selection-end-line="62" selection-end-column="63" />
+        <state relative-caret-position="312">
+          <caret line="103" column="69" lean-forward="true" selection-start-line="103" selection-start-column="69" selection-end-line="103" selection-end-column="69" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DataBase/src/main/java/com/dev/db/data/graph/service/inte/UserService.java">
+    <entry file="file://$PROJECT_DIR$/BigQuery/src/main/java/com/dev/bq/request/IosQueryFactory.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="22" column="16" lean-forward="false" selection-start-line="22" selection-start-column="16" selection-end-line="22" selection-end-column="16" />
+        <state relative-caret-position="312">
+          <caret line="258" column="59" lean-forward="true" selection-start-line="258" selection-start-column="59" selection-end-line="258" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DataBase/src/main/java/com/dev/db/data/graph/adapter/LoginAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="52" column="30" lean-forward="false" selection-start-line="52" selection-start-column="30" selection-end-line="52" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DataBase/src/main/java/com/dev/db/data/graph/adapter/TradeAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="69" column="63" lean-forward="true" selection-start-line="69" selection-start-column="63" selection-end-line="69" selection-end-column="63" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DataBase/src/main/java/com/dev/db/data/graph/repository/edge/OpenRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="17" column="55" lean-forward="false" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DataBase/src/main/java/com/dev/db/data/graph/repository/edge/TradeRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="335">
+          <caret line="22" column="6" lean-forward="false" selection-start-line="22" selection-start-column="6" selection-end-line="22" selection-end-column="6" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RestApi/src/main/java/com/dev/ra/controller/nodes/ViewController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-399">
+          <caret line="23" column="13" lean-forward="false" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DataBase/src/main/java/com/dev/db/data/graph/service/impl/ViewServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="848">
+          <caret line="100" column="5" lean-forward="true" selection-start-line="100" selection-start-column="5" selection-end-line="100" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DataBase/src/main/java/com/dev/db/data/graph/service/impl/UsingServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-306">
+          <caret line="27" column="13" lean-forward="false" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/DataBase/src/main/java/com/dev/db/data/graph/service/impl/UserServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="316" column="17" lean-forward="true" selection-start-line="316" selection-start-column="17" selection-end-line="316" selection-end-column="17" />
+        <state relative-caret-position="1292">
+          <caret line="320" column="46" lean-forward="false" selection-start-line="320" selection-start-column="46" selection-end-line="320" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DataBase/src/main/java/com/dev/db/data/graph/service/impl/TradeServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="65" column="43" lean-forward="true" selection-start-line="65" selection-start-column="43" selection-end-line="65" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DataBase/src/main/java/com/dev/db/data/graph/service/impl/LoginServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-306">
+          <caret line="27" column="13" lean-forward="false" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DataBase/src/main/java/com/dev/db/data/graph/service/impl/EngageServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-306">
+          <caret line="27" column="13" lean-forward="false" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DataBase/src/main/java/com/dev/db/data/graph/service/impl/DownloadedServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-136">
+          <caret line="34" column="46" lean-forward="true" selection-start-line="34" selection-start-column="46" selection-end-line="34" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DataBase/src/main/java/com/dev/db/data/graph/adapter/NotificationAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="975">
+          <caret line="89" column="62" lean-forward="true" selection-start-line="89" selection-start-column="62" selection-end-line="89" selection-end-column="62" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DataBase/src/main/java/com/dev/db/data/graph/service/impl/OpenServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="23" column="13" lean-forward="true" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
           <folding>
-            <element signature="e#975#976#0" expanded="true" />
-            <element signature="e#1002#1003#0" expanded="true" />
+            <element signature="e#2272#2273#0" expanded="true" />
+            <element signature="e#2299#2300#0" expanded="true" />
+            <element signature="e#2365#2366#0" expanded="true" />
+            <element signature="e#2392#2393#0" expanded="true" />
+            <element signature="e#2462#2463#0" expanded="true" />
+            <element signature="e#2489#2490#0" expanded="true" />
+            <element signature="e#2538#2539#0" expanded="true" />
+            <element signature="e#2565#2566#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Sentinel/src/main/resources/application.properties">
+    <entry file="file://$PROJECT_DIR$/DataBase/src/main/java/com/dev/db/data/graph/bean/edge/Open.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="395">
-          <caret line="48" column="22" lean-forward="false" selection-start-line="48" selection-start-column="22" selection-end-line="48" selection-end-column="22" />
+        <state relative-caret-position="289">
+          <caret line="24" column="31" lean-forward="true" selection-start-line="24" selection-start-column="31" selection-end-line="24" selection-end-column="31" />
           <folding />
         </state>
       </provider>

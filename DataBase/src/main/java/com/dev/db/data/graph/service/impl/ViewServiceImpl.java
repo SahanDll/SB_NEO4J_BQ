@@ -16,6 +16,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
@@ -38,6 +39,9 @@ public class ViewServiceImpl implements ViewService {
     public View create(View view) {
         View vi = viewRepository.findTop1ByUserIdAndFromScreenNameAndToScreenNameAndPlatform(view.getUserId(), view.getFromScreenName(), view.getToScreenName(), view.getPlatform());
         User us = userRepository.findTop1ByUserId(view.getUserId());
+        if(null == us){
+            view.getUser().setFirstLogin(new Date());
+        }
         ScreenTransition st = screenRepository.findTop1ByPreviousScreenAndScreen(view.getScreen().getPreviousScreen(), view.getScreen().getScreen());
         if(null == vi){
             if(null != us){

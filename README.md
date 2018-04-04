@@ -56,7 +56,10 @@ SELECT user_dim.user_id, event_dim.name, event_dim.params.key, event_dim.params.
 WHERE (user_dim.user_id <> '-1' AND user_dim.user_id <> 'null') and event_dim.name= 'screen_view' and (event_dim.params.key = 'firebase_previous_screen' or event_dim.params.key = 'firebase_screen')
 ORDER BY user_dim.user_id desc, event_dim.timestamp_micros asc 
 
-SELECT user_dim.user_id, event_dim.name, event_dim.params.key, event_dim.params.value.string_value FROM [mketrade-cefcb:com_mbb_mketrade_uat_ANDROID.app_events_20180327]
+
+
+SELECT user_dim.user_id, event_dim.name, event_dim.params.key, event_dim.params.value.string_value, event_dim.params.value.int_value, event_dim.timestamp_micros  
+FROM [mketrade-cefcb:com_mbb_mketrade_ANDROID.app_events_20180403]
 WHERE event_dim.name <> 'user_engagement' 
 AND event_dim.name <> 'screen_view' 
 AND event_dim.name <> 'Login' 
@@ -73,6 +76,7 @@ AND event_dim.name <> 'NotificationClicked'
 AND event_dim.name <> 'ViewTopMoversType'
 AND event_dim.name <> 'ViewNews'
 AND event_dim.name <> 'ViewFullQuoteFromWatchlist'
+AND event_dim.name <> 'ViewFullQuoteFromPortfolio'
 AND event_dim.name <> 'ViewMKEInsightFromHome'
 AND event_dim.name <> 'NotificationOpenedScreen'
 AND event_dim.name <> 'GlobalSearch'
@@ -80,6 +84,27 @@ AND event_dim.name <> 'ViewAlertDetails'
 AND event_dim.name <> 'TradeFromOrder'
 AND event_dim.name <> 'TradeFromOrderList'
 AND event_dim.name <> 'TradeFromMKECall'
+AND event_dim.name <> 'TradeFromFullQuote'
+AND event_dim.name <> 'TradeFromPriceAlertList'
+AND event_dim.name <> 'ViewFullQuoteFromTopMovers'
+AND event_dim.name <> 'TradeFromHomePortfolios'
+AND event_dim.name <> 'TradeFromPriceAlert'
+AND event_dim.name <> 'Account'
+AND event_dim.name <> 'ViewIndexDetails'
+AND event_dim.name <> 'app_update'
+AND event_dim.name <> 'ViewFullQuoteFromGlobalSearch'
+AND event_dim.name <> 'TradeFromHomeWatchlist'
+AND event_dim.name <> 'EventVisitSite'
+AND event_dim.name <> 'ViewMKEInsightFromGlobalSearch'
+AND event_dim.name <> 'ViewMKEInsight'
+AND event_dim.name <> 'firebase_campaign'
+AND event_dim.name <> 'ViewFullQuoteFromDiscoverTopMovers'
+AND event_dim.name <> 'AddModelPortfolioToWatchlist'
+AND event_dim.name <> 'ViewFullQuoteFromMKEInsights'
+AND event_dim.name <> 'TradeFromPortfolioAlert'
+AND event_dim.name <> 'dynamic_link_app_open'
+AND event_dim.name <> 'TradeFromChart'
+AND event_dim.name <> 'os_update'
 LIMIT 1000
 
 

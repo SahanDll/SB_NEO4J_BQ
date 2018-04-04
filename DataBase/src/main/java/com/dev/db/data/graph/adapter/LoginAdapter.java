@@ -50,7 +50,7 @@ public class LoginAdapter {
             lif.setUserId(row.getF().get(0).get("v").toString());
             lif.setLocation(gi.getCity());
             lif.getLoginDate().add(Common.getStartOfDay(Common.getBackDate(-1)).getTime());
-            lif.setCreateDate(Common.getBackDate(-1));
+            lif.setCreateDate(Common.getCurrentDate());
             list.add(lif);
         }
         return list;

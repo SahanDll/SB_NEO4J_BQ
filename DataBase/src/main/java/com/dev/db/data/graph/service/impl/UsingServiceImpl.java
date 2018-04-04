@@ -16,6 +16,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
@@ -38,6 +39,9 @@ public class UsingServiceImpl implements UsingService {
     public Using create(Using using) {
         Using ui = usingRepository.findTop1ByUserIdAndDeviceAndPlatform(using.getUserId(), using.getDevice(), using.getPlatform());
         User us = userRepository.findTop1ByUserId(using.getUserId());
+        if(null == us){
+            using.getUser().setFirstLogin(new Date());
+        }
         DeviceInfo di = deviceInfoRepository.findTop1ByDeviceModel(using.getDevice());
         if(null == ui){
             if(null != us){
